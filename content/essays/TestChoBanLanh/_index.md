@@ -1,7 +1,7 @@
 ---
-title:testing
-date:2026-04-17
-showTableOfContent:true
+title: testing
+showTableOfContents: true
+date: 2026-04-17
 ---
 Thay khong e
 
