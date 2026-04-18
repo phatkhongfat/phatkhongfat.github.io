@@ -9,7 +9,377 @@
     <managingEditor>youremail@example.com (phatkhongfat)</managingEditor>
     <webMaster>youremail@example.com (phatkhongfat)</webMaster>
     <copyright>© 2026 phatkhongfat</copyright>
-    <lastBuildDate></lastBuildDate><atom:link href="http://localhost:1313/bookshelf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/bookshelf/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>1984</title>
+      <link>http://localhost:1313/bookshelf/1984/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/1984/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/1984/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>A Man Called Ove</title>
+      <link>http://localhost:1313/bookshelf/a-man-called-ove/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/a-man-called-ove/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/a-man-called-ove/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Atomic Habits: An Easy &amp; Proven Way to Build Good Habits &amp; Break Bad Ones</title>
+      <link>http://localhost:1313/bookshelf/atomic-habits-an-easy--proven-way-to-build-good-habits--break-bad-ones/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/atomic-habits-an-easy--proven-way-to-build-good-habits--break-bad-ones/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/atomic-habits-an-easy--proven-way-to-build-good-habits--break-bad-ones/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Beauty and Sadness</title>
+      <link>http://localhost:1313/bookshelf/beauty-and-sadness/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/beauty-and-sadness/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/beauty-and-sadness/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Big Breasts and Wide Hips</title>
+      <link>http://localhost:1313/bookshelf/big-breasts-and-wide-hips/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/big-breasts-and-wide-hips/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/big-breasts-and-wide-hips/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Crime and Punishment</title>
+      <link>http://localhost:1313/bookshelf/crime-and-punishment/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/crime-and-punishment/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/crime-and-punishment/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Deadhouse Gates</title>
+      <link>http://localhost:1313/bookshelf/deadhouse-gates/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/deadhouse-gates/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/deadhouse-gates/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Đinh Trang Mộng</title>
+      <link>http://localhost:1313/bookshelf/%C4%91inh-trang-m%E1%BB%99ng/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/%C4%91inh-trang-m%E1%BB%99ng/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/%C4%91inh-trang-m%E1%BB%99ng/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Đoản luận về giáo dục</title>
+      <link>http://localhost:1313/bookshelf/%C4%91o%E1%BA%A3n-lu%E1%BA%ADn-v%E1%BB%81-gi%C3%A1o-d%E1%BB%A5c/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/%C4%91o%E1%BA%A3n-lu%E1%BA%ADn-v%E1%BB%81-gi%C3%A1o-d%E1%BB%A5c/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/%C4%91o%E1%BA%A3n-lu%E1%BA%ADn-v%E1%BB%81-gi%C3%A1o-d%E1%BB%A5c/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Dune</title>
+      <link>http://localhost:1313/bookshelf/dune/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/dune/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/dune/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Dungeon Crawler Carl</title>
+      <link>http://localhost:1313/bookshelf/dungeon-crawler-carl/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/dungeon-crawler-carl/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/dungeon-crawler-carl/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Fahrenheit 451</title>
+      <link>http://localhost:1313/bookshelf/fahrenheit-451/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/fahrenheit-451/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/fahrenheit-451/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Gardens of the Moon</title>
+      <link>http://localhost:1313/bookshelf/gardens-of-the-moon/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/gardens-of-the-moon/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/gardens-of-the-moon/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Hard Rain Falling</title>
+      <link>http://localhost:1313/bookshelf/hard-rain-falling/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/hard-rain-falling/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/hard-rain-falling/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Man&#39;s Search for Meaning</title>
+      <link>http://localhost:1313/bookshelf/mans-search-for-meaning/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/mans-search-for-meaning/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/mans-search-for-meaning/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Meditations</title>
+      <link>http://localhost:1313/bookshelf/meditations/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/meditations/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/meditations/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Mộc thần nữ</title>
+      <link>http://localhost:1313/bookshelf/m%E1%BB%99c-th%E1%BA%A7n-n%E1%BB%AF/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/m%E1%BB%99c-th%E1%BA%A7n-n%E1%BB%AF/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/m%E1%BB%99c-th%E1%BA%A7n-n%E1%BB%AF/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Montaigne</title>
+      <link>http://localhost:1313/bookshelf/montaigne/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/montaigne/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Một câu chuyện từ những đụn cát</title>
+      <link>http://localhost:1313/bookshelf/m%E1%BB%99t-c%C3%A2u-chuy%E1%BB%87n-t%E1%BB%AB-nh%E1%BB%AFng-%C4%91%E1%BB%A5n-c%C3%A1t/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/m%E1%BB%99t-c%C3%A2u-chuy%E1%BB%87n-t%E1%BB%AB-nh%E1%BB%AFng-%C4%91%E1%BB%A5n-c%C3%A1t/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/m%E1%BB%99t-c%C3%A2u-chuy%E1%BB%87n-t%E1%BB%AB-nh%E1%BB%AFng-%C4%91%E1%BB%A5n-c%C3%A1t/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Ngày Tháng Năm</title>
+      <link>http://localhost:1313/bookshelf/ng%C3%A0y-th%C3%A1ng-n%C4%83m/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/ng%C3%A0y-th%C3%A1ng-n%C4%83m/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Of Mice and Men</title>
+      <link>http://localhost:1313/bookshelf/of-mice-and-men/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/of-mice-and-men/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/of-mice-and-men/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>One Hundred Years of Solitude</title>
+      <link>http://localhost:1313/bookshelf/one-hundred-years-of-solitude/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/one-hundred-years-of-solitude/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/one-hundred-years-of-solitude/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Panenka</title>
+      <link>http://localhost:1313/bookshelf/panenka/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/panenka/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/panenka/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Piranesi</title>
+      <link>http://localhost:1313/bookshelf/piranesi/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/piranesi/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/piranesi/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Siddhartha</title>
+      <link>http://localhost:1313/bookshelf/siddhartha/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/siddhartha/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/siddhartha/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Alchemist</title>
+      <link>http://localhost:1313/bookshelf/the-alchemist/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-alchemist/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-alchemist/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Book Thief</title>
+      <link>http://localhost:1313/bookshelf/the-book-thief/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-book-thief/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-book-thief/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Brief and Frightening Reign of Phil</title>
+      <link>http://localhost:1313/bookshelf/the-brief-and-frightening-reign-of-phil/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-brief-and-frightening-reign-of-phil/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-brief-and-frightening-reign-of-phil/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Count of Monte Cristo</title>
+      <link>http://localhost:1313/bookshelf/the-count-of-monte-cristo/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-count-of-monte-cristo/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-count-of-monte-cristo/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Firm</title>
+      <link>http://localhost:1313/bookshelf/the-firm/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-firm/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-firm/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Master and Margarita</title>
+      <link>http://localhost:1313/bookshelf/the-master-and-margarita/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-master-and-margarita/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-master-and-margarita/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Metamorphosis</title>
+      <link>http://localhost:1313/bookshelf/the-metamorphosis/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-metamorphosis/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-metamorphosis/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>The Stranger</title>
+      <link>http://localhost:1313/bookshelf/the-stranger/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/the-stranger/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/the-stranger/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Tứ Thư</title>
+      <link>http://localhost:1313/bookshelf/t%E1%BB%A9-th%C6%B0/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/t%E1%BB%A9-th%C6%B0/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/t%E1%BB%A9-th%C6%B0/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Vụ án</title>
+      <link>http://localhost:1313/bookshelf/v%E1%BB%A5-%C3%A1n/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/v%E1%BB%A5-%C3%A1n/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/v%E1%BB%A5-%C3%A1n/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>White Nights: The Novels of Fyodor Dostoevsky</title>
+      <link>http://localhost:1313/bookshelf/white-nights-the-novels-of-fyodor-dostoevsky/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/white-nights-the-novels-of-fyodor-dostoevsky/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/white-nights-the-novels-of-fyodor-dostoevsky/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>Wuthering Heights</title>
+      <link>http://localhost:1313/bookshelf/wuthering-heights/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/bookshelf/wuthering-heights/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/bookshelf/wuthering-heights/feature.jpg" />
+    </item>
     
   </channel>
 </rss>

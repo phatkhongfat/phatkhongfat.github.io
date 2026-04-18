@@ -55,9 +55,9 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
   homepageImage = "/img/bg2.gif" # used in: hero, and card
-  showRecent = true
+  showRecent = false
   showRecentItems = 6
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "/posts"
   cardView = true
   cardViewScreenWidth = false
@@ -71,8 +71,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showDateUpdated = false
   showAuthor = true
   # showAuthorBottom = false
-  showHero = false
-  # heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
@@ -99,8 +99,8 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   # externalLinkForceNewTab = false # disable to allow external links in the same tab (defaults to true)
 
 [list]
-  showHero = false
-  # heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
+  showHero = true
+  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
@@ -111,7 +111,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showCards = false
   orderByWeight = false
   groupByYear = true
-  cardView = false
+  cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
 

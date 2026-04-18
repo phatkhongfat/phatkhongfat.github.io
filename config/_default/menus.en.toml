@@ -12,7 +12,7 @@
 [[main]]
   name = "Projects"
   identifier = "projects"  # This is the "ID" for the parent
-  url = "/projects/"
+  url = "#"
   weight = 10
 
 [[main]]

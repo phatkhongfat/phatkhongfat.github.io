@@ -9,7 +9,7 @@
     <managingEditor>youremail@example.com (phatkhongfat)</managingEditor>
     <webMaster>youremail@example.com (phatkhongfat)</webMaster>
     <copyright>© 2026 phatkhongfat</copyright>
-    <lastBuildDate></lastBuildDate><atom:link href="http://localhost:1313/essays/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/essays/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

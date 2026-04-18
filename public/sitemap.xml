@@ -3,38 +3,261 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/essays/</loc>
-    <lastmod>2026-04-18T09:43:23-04:00</lastmod>
+    <loc>http://localhost:1313/bookshelf/1984/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-04-18T09:43:23-04:00</lastmod>
+    <loc>http://localhost:1313/bookshelf/a-man-called-ove/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/essays/testchobanlanh/test/</loc>
-    <lastmod>2026-04-18T09:43:23-04:00</lastmod>
+    <loc>http://localhost:1313/bookshelf/atomic-habits-an-easy--proven-way-to-build-good-habits--break-bad-ones/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/essays/testchobanlanh/</loc>
-    <lastmod>2026-04-17T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/bookshelf/beauty-and-sadness/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/big-breasts-and-wide-hips/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/bookshelf/crime-and-punishment/</loc>
-    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/deadhouse-gates/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/%C4%91inh-trang-m%E1%BB%99ng/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/%C4%91o%E1%BA%A3n-lu%E1%BA%ADn-v%E1%BB%81-gi%C3%A1o-d%E1%BB%A5c/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/dune/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/dungeon-crawler-carl/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/fahrenheit-451/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/gardens-of-the-moon/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/hard-rain-falling/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/mans-search-for-meaning/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/meditations/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/m%E1%BB%99c-th%E1%BA%A7n-n%E1%BB%AF/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/montaigne/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/m%E1%BB%99t-c%C3%A2u-chuy%E1%BB%87n-t%E1%BB%AB-nh%E1%BB%AFng-%C4%91%E1%BB%A5n-c%C3%A1t/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/ng%C3%A0y-th%C3%A1ng-n%C4%83m/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/of-mice-and-men/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/one-hundred-years-of-solitude/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/panenka/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/piranesi/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/siddhartha/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-alchemist/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-book-thief/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/bookshelf/</loc>
-    <lastmod>2026-04-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-brief-and-frightening-reign-of-phil/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-count-of-monte-cristo/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-firm/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-master-and-margarita/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-metamorphosis/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/the-stranger/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/t%E1%BB%A9-th%C6%B0/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/v%E1%BB%A5-%C3%A1n/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/white-nights-the-novels-of-fyodor-dostoevsky/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/bookshelf/wuthering-heights/</loc>
+    <lastmod>2026-04-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/ctf/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/essays/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/labs/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/research/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
