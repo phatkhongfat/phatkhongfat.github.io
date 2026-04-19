@@ -1,0 +1,19 @@
+/* Make bookshelf images look like physical book covers */
+.bookshelf-grid .card-image {
+    aspect-ratio: 2 / 3; /* Standard book cover ratio */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6); /* Noir deep shadow */
+    border-radius: 2px 5px 5px 2px; /* Slight spine curve */
+}
+
+/* Hover effect: Book "lifts" off the shelf */
+.bookshelf-grid .card:hover .card-image {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.8);
+}
+
+/* Hide text labels in the grid for a "clean shelf" look */
+.bookshelf-grid .card-body {
+    padding: 0.5rem 0;
+}
