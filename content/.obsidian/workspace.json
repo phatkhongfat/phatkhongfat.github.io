@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f45756b461f712d7",
+        "id": "f505e8362cde9321",
         "type": "tabs",
         "children": [
           {
-            "id": "165fa4c19316c443",
+            "id": "f1afc8fe2c1eaae0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "projects/research/_index.md",
+                "file": "projects/research/tong-quan-ve-an-toan-thong-tin/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_index"
+              "title": "index"
             }
           }
         ]
@@ -40,7 +40,8 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabetical",
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -154,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -162,11 +164,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "165fa4c19316c443",
+  "active": "f1afc8fe2c1eaae0",
   "lastOpenFiles": [
+    "projects/research/tong-quan-ve-an-toan-thong-tin/Pasted image 20260420193323.png",
+    "projects/research/tong-quan-ve-an-toan-thong-tin/Pasted image 20260420192724.png",
+    "projects/research/tong-quan-ve-an-toan-thong-tin/Pasted image 20260420192644.png",
+    "projects/research/feature.gif",
+    "projects/labs/port-swigger/sqli/_index.md",
+    "projects/labs/port-swigger/sqli/Pasted image 20260420001356.png",
+    "projects/labs/port-swigger/sqli/Pasted image 20260420002942.png",
+    "projects/labs/port-swigger/sqli/feature.jpg",
+    "projects/research/tong-quan-ve-an-toan-thong-tin/index.md",
+    "projects/research/tong-quan-ve-an-toan-thong-tin/feature.jpeg",
+    "projects/labs/port-swigger/feature.png",
+    "projects/labs/port-swigger/features.jpg",
+    "projects/labs/port-swigger/sqli/Pasted image 20260420001343.png",
+    "projects/labs/_index.md",
     "projects/_index.md",
     "projects/research/_index.md",
-    "projects/research/feature.gif",
     "essays/_index.md"
   ]
 }

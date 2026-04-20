@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (phatkhongfat)</managingEditor>
     <webMaster>youremail@example.com (phatkhongfat)</webMaster>
     <copyright>© 2026 phatkhongfat</copyright>
-    <atom:link href="http://localhost:1313/projects/research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Apr 2026 18:58:58 -0400</lastBuildDate><atom:link href="http://localhost:1313/projects/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tổng quan về an toàn thông tin</title>
+      <link>http://localhost:1313/projects/research/tong-quan-ve-an-toan-thong-tin/</link>
+      <pubDate>Sun, 19 Apr 2026 18:58:58 -0400</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/projects/research/tong-quan-ve-an-toan-thong-tin/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/projects/research/tong-quan-ve-an-toan-thong-tin/feature.jpeg" />
+    </item>
     
   </channel>
 </rss>

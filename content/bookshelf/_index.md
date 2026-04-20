@@ -2,7 +2,6 @@
 title: "The Bookshelf"
 description: "My 40-book challenge and literary journey."
 layout: "list"
-class: "bookshelf-grid"
 showThumbnail: true
 collumnCount: 4
 ---

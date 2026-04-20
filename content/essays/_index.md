@@ -4,4 +4,5 @@ description: "Reflections on literature, philosophy, and the hacker mindset."
 layout: "list"
 showThumbnail: false
 ---
-Thoughts
+Thoughts why it doesn't change?
+wtf
