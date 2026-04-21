@@ -1,11 +1,11 @@
 ---
-title: "Tổng quan về an toàn thông tin"
+title: Tổng quan về an toàn thông tin
 date: 2026-04-19T18:58:58-04:00
 showTableOfContents: true
-category: "Research" 
-difficulty: "Easy"
-feature: "feature.jpeg"
-draft: true
+category: Research
+difficulty: Easy
+feature: feature.jpeg
+draft: false
 ---
 Để xây dựng hoặc vận hành một hệ thống an toàn, bạn không thể chỉ dựa vào may mắn. Vấn đề cốt lõi nằm ở việc hiểu rõ các cơ chế bảo vệ và những nguy cơ thực tế. Bài viết này sẽ tập trung phân tích 3 khía cạnh kỹ thuật then chốt trong bảo mật hệ thống:
 
@@ -28,4 +28,4 @@ draft: true
 Dựa vào việc kết hợp các yếu tố ở mục trên, ta có thể phân loại như sau:
 - **Xác thực đơn yếu tố (SFA - Single Factor Authentication):** Chỉ sử dụng 1 yếu tố duy nhất để đăng nhập. Thường gặp nhất là chỉ sử dụng Username + Password. Mức độ bảo mật tương đối thấp.
 - **Xác thực hai yếu tố (2FA - Two-Factor Authentication):** Sử dụng 2 yếu tố thuộc 2 nhóm khác nhau. *Ví dụ:* Mật khẩu + Mã OTP gửi về điện thoại.
-- 
+- aBcd
