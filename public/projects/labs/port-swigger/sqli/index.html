@@ -243,7 +243,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2236"
+    "wordCount": "2790"
   }]
   </script>
 
@@ -835,6 +835,12 @@
         <li><a href="#solution-4">Solution</a></li>
       </ul>
     </li>
+    <li><a href="#lab-sql-injection-attack-listing-the-database-contents-on-non-oracle-databases">Lab: SQL injection attack, listing the database contents on non-Oracle databases</a>
+      <ul>
+        <li><a href="#description-5">Description</a></li>
+        <li><a href="#solution-5">Solution</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -876,6 +882,12 @@
       <ul>
         <li><a href="#description-4">Description</a></li>
         <li><a href="#solution-4">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-sql-injection-attack-listing-the-database-contents-on-non-oracle-databases">Lab: SQL injection attack, listing the database contents on non-Oracle databases</a>
+      <ul>
+        <li><a href="#description-5">Description</a></li>
+        <li><a href="#solution-5">Solution</a></li>
       </ul>
     </li>
   </ul>
@@ -1510,16 +1522,297 @@
 </li>
 </ol>
 
+<h2 class="relative group">Lab: SQL injection attack, listing the database contents on non-Oracle databases
+    <div id="lab-sql-injection-attack-listing-the-database-contents-on-non-oracle-databases" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-sql-injection-attack-listing-the-database-contents-on-non-oracle-databases" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Description
+    <div id="description-5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#description-5" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>This lab contains a SQL injection vulnerability in the product category filter. The results from the query are returned in the application&rsquo;s response so you can use a UNION attack to retrieve data from other tables.</p>
+<p>The application has a login function, and the database contains a table that holds usernames and passwords. You need to determine the name of this table and the columns it contains, then retrieve the contents of the table to obtain the username and password of all users.</p>
+<p>To solve the lab, log in as the <code>administrator</code> user.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-5" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong>
+In modern, non-Oracle databases (like PostgreSQL, MySQL, and Microsoft SQL Server), there is a built-in, standardized database called the <code>information_schema</code>. This schema acts as a directory, containing metadata about every table and column the database holds.</p>
+<p>Because modern secure applications often append random strings to table and column names (e.g., <code>users_ab12cd</code>) to prevent blind guessing, we cannot just query <code>SELECT * FROM users</code>. Instead, we must first query <code>information_schema.tables</code> to find the exact table name, then query <code>information_schema.columns</code> to find the exact column names, and <em>finally</em> extract the data.</p>
+<p><strong>The Payloads</strong> Assuming we have already tested the endpoint and determined that the original query returns <strong>two columns, both accepting text</strong>, we will use a three-phase payload strategy.</p>
+<ul>
+<li>
+<p><strong>Phase 1 Payload (Finding the Table):</strong> <code>' UNION SELECT table_name, NULL FROM information_schema.tables--</code></p>
+<ul>
+<li><strong>Breakdown:</strong> We query the standardized <code>tables</code> view. We pull the <code>table_name</code> into the first column and keep the second column <code>NULL</code> to maintain the required two-column structure. We are looking for a table that sounds like <code>users</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Phase 2 Payload (Finding the Columns):</strong> <code>' UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name = '[USERS_TABLE_NAME]'--</code></p>
+<ul>
+<li><strong>Breakdown:</strong> Once we know the specific users table name, we query the <code>columns</code> view. We use a <code>WHERE</code> clause to filter the results so it only shows columns belonging to our target table. We are looking for columns that sound like <code>username</code> and <code>password</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Phase 3 Payload (Extracting the Credentials):</strong> <code>' UNION SELECT [USERNAME_COLUMN], [PASSWORD_COLUMN] FROM [USERS_TABLE_NAME]--</code></p>
+<ul>
+<li><strong>Breakdown:</strong> Now that we have the exact, randomized names for the table and both columns, we can construct a standard <code>UNION SELECT</code> to dump the credentials onto the webpage.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p><strong>Turn on</strong> Burp Suite Proxy Intercept.</p>
+</li>
+<li>
+<p><strong>Click</strong> on any category on the homepage to capture the <code>GET /filter?category=Gifts</code> request.</p>
+</li>
+<li>
+<p><strong>Send</strong> the intercepted request to Repeater (Ctrl+R).</p>
+</li>
+<li>
+<p><strong>Modify</strong> the <code>category</code> parameter to locate the users table. <strong>URL-encode</strong> the payload:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+table_name,NULL+FROM+information_schema.tables--</code></li>
+<li></li>
+</ul>
+</li>
+<li>
+<p><strong>Click</strong> Send. <strong>Search</strong> the Response HTML for the word <code>users</code>. <strong>Note</strong> the exact, randomized table name (e.g., users_nthbyy).
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260426111600.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Modify</strong> the parameter again to find the columns for that specific table. <strong>URL-encode</strong> the payload, replacing <code>users_nthbyy</code> with your discovered table name:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+column_name,NULL+FROM+information_schema.columns+WHERE+table_name='users_nthbyy'--</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Click</strong> Send. <strong>Review</strong> the Response HTML to find the randomized column names for the username and password (e.g., username_lkqpqa and <code>password_vordtc</code>). <strong>Note</strong> both exact names.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260426112007.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Modify</strong> the parameter one final time to extract the credentials, using the exact table and column names you discovered. <strong>URL-encode</strong> the payload:</p>
+<ul>
+<li><em>Modified parameter:</em> <code>category=Gifts'+UNION+SELECT+username_lkqpqa,password_vordtc+FROM+users_nthbyy--</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Click</strong> Send. <strong>Search</strong> the Response HTML for <code>administrator</code>.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260426113236.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Copy</strong> the extracted password associated with the <code>administrator</code> account.</p>
+</li>
+<li>
+<p><strong>Navigate</strong> to the &ldquo;My account&rdquo; login page in the browser. <strong>Log in</strong> using the <code>administrator</code> username and the extracted password.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260426113320.png"
+    ></figure>
+</p>
+</li>
+</ol>
+
     </div>
   </section>
 
   
   
-    <section class="mt-10 prose dark:prose-invert">
-      <p class="py-8 border-t">
-        <em>There are no articles to list here yet.</em>
-      </p>
-    </section>
+    
+    
+    
+    
+    
+
+    
+      
+        
+          
+            <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+              0001
+            </h2>
+            <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              
+                
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article
+  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  
+  
+  <div class="p-4">
+    <header>
+      <a
+        
+          href="/projects/labs/port-swigger/sqli/untitled/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          
+          
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time><span class="px-2 text-primary-500">&middot;</span><span>284 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+
+    </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+              
+            </section>
+          
+        
+
+      
+      
+    
+  
   
   
 

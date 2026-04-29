@@ -273,6 +273,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/projects/labs/port-swigger/sqli/untitled/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/projects/ctf/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
