@@ -1,10 +1,10 @@
 {{ $link := .Get "link" }}
 {{ $page := .Site.GetPage $link }}
 {{ if $page }}
-<div class="book-showcase relative group flex flex-col sm:flex-row gap-8 p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-filter backdrop-blur-lg my-8 shadow-xl hover:shadow-2xl transition-all duration-500 not-prose">
+<div class="book-showcase relative group flex flex-col sm:flex-row gap-0 rounded-2xl border border-white/10 bg-white/5 backdrop-filter backdrop-blur-lg my-8 shadow-xl hover:shadow-2xl transition-all duration-500 not-prose" style="padding: 1.5rem !important;">
   
   {{/* Book Cover with 3D Elevation */}}
-  <div class="flex-shrink-0 w-18 sm:w-22 shadow-2xl rounded-md overflow-hidden bg-neutral-900 self-start transform group-hover:-translate-y-1 group-hover:rotate-[-1deg] transition-all duration-500 opacity-90 group-hover:opacity-100 sm:mr-2">
+  <div class="flex-shrink-0 w-18 sm:w-22 shadow-2xl rounded-md overflow-hidden bg-neutral-900 self-start transform group-hover:-translate-y-1 group-hover:rotate-[-1deg] transition-all duration-500 opacity-90 group-hover:opacity-100" style="margin-right: 2rem !important; margin-bottom: 1rem !important; sm:margin-bottom: 0 !important;">
     {{ $feature := $page.Resources.GetMatch "feature*" }}
     {{ if not $feature }}{{ $feature = $page.Resources.GetMatch "feature.jpg" }}{{ end }}
     
