@@ -25,7 +25,7 @@
     {{ $chunkSize := cond $compact 8 12 }}
     {{ $chunks := div (add $total (sub $chunkSize 1)) $chunkSize }}
     
-    <div class="flex flex-col gap-y-12">
+    <div class="flex flex-col gap-y-8">
       {{ range seq $chunks }}
         {{ $offset := mul (sub . 1) $chunkSize }}
         {{ $shelfBooks := first $chunkSize (after $offset $books) }}

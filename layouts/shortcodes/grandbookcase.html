@@ -1,4 +1,4 @@
-<div class="bookshelf-container not-prose mt-12 mb-16">
+<div class="bookshelf-container not-prose mt-8 mb-8">
   
   {{/* 1. DATA COLLECTION */}}
   {{ $current := slice }}
@@ -14,7 +14,7 @@
   {{/* Combine all for total count */}}
   {{ $all_books := $current | append $read | append $toread }}
   
-  <div class="mb-12 text-center relative">
+  <div class="mb-8 text-center relative">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
       <div class="w-full border-t border-neutral-200 dark:border-neutral-800"></div>
     </div>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="flex flex-col gap-y-16">
+  <div class="flex flex-col gap-y-10">
     
     {{/* SHELF 1: Currently Reading & Start of Read History */}}
     <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">

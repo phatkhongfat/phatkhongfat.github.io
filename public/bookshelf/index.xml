@@ -9,7 +9,7 @@
     <managingEditor>youremail@example.com (phatkhongfat)</managingEditor>
     <webMaster>youremail@example.com (phatkhongfat)</webMaster>
     <copyright>© 2026 phatkhongfat</copyright>
-    <lastBuildDate>Wed, 29 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/bookshelf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/bookshelf/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A Man Called Ove</title>
