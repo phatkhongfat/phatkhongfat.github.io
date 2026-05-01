@@ -149,13 +149,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
     white-space: nowrap;
-    color: rgba(0, 0, 0, 0.7); /* Dark text for light mode */
+    color: rgba(0, 0, 0, 0.9) !important; /* Force dark text for light mode */
     font-size: 0.65rem;
     font-family: serif;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.3);
+    text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.5) !important;
     width: 140px;
     text-align: center;
     pointer-events: none;
@@ -165,8 +165,8 @@ body {
 }
 
 .dark .spine-title {
-    color: rgba(245, 245, 220, 0.9);
-    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    color: rgba(245, 245, 220, 0.9) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1) !important;
 }
 
 /* Decorative Items */
