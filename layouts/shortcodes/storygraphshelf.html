@@ -36,7 +36,7 @@
           {{ end }}
 
           {{ range $shelfBooks }}
-            <a href="{{ .RelPermalink }}" class="book-spine {{ if $compact }} !w-6 !h-[140px] {{ end }}" style="background-color: {{ .Params.spine_color | default "#444" }};">
+            <a href="{{ .RelPermalink }}" class="book-spine {{ if $compact }} !w-6 !h-[140px] {{ end }}" style="background-color: {{ .Params.spine_color | default "#444" }}; {{ if not $compact }} width: {{ .Params.spine_width | default 32 }}px; {{ end }}">
               <div class="spine-title {{ if $compact }} !w-[120px] !text-[8px] {{ end }}">{{ .Title }}</div>
             </a>
           {{ end }}

@@ -29,16 +29,43 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
-    border-left: 1px solid rgba(255,255,255,0.05);
-    border-right: 1px solid rgba(0,0,0,0.3);
-    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.4);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5), inset 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 2px 2px 0 0;
+}
+
+/* Decorative Gold/Silver lines at top and bottom */
+.book-spine::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
+    box-shadow: 0 160px 0 rgba(255,215,0,0.4);
+    z-index: 1;
+}
+
+/* Aged texture/lighting overlay */
+.book-spine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0.1) 0%, 
+        transparent 20%, 
+        transparent 80%, 
+        rgba(0,0,0,0.3) 100%);
+    pointer-events: none;
 }
 
 .book-spine:hover {
     transform: translateY(-15px) scale(1.05);
     z-index: 50;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.8);
-    filter: brightness(1.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    filter: brightness(1.2) contrast(1.1);
 }
 
 .spine-title {
@@ -47,18 +74,19 @@
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
     white-space: nowrap;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(245, 245, 220, 0.9); /* Antique white */
     font-size: 0.65rem;
     font-family: serif;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-    width: 160px;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    width: 140px;
     text-align: center;
     pointer-events: none;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 2;
 }
 
 /* Decorative Items */

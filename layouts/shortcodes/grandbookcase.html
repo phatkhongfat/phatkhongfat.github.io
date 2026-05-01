@@ -31,7 +31,7 @@
     <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
       {{ if gt (len $current) 0 }}
         {{ range $current }}
-          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }}; width: {{ .Params.spine_width | default 32 }}px;">
              {{/* Glow effect for currently reading */}}
              <div class="absolute inset-0 bg-white/10 animate-pulse pointer-events-none"></div>
              <div class="spine-title">{{ .Title }}</div>
@@ -41,7 +41,7 @@
       {{ end }}
 
       {{ range first 10 $read }}
-        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }}; width: {{ .Params.spine_width | default 32 }}px;">
           <div class="spine-title">{{ .Title }}</div>
         </a>
       {{ end }}
@@ -51,7 +51,7 @@
     {{ if gt (len $read) 10 }}
     <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
       {{ range first 15 (after 10 $read) }}
-        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }}; width: {{ .Params.spine_width | default 32 }}px;">
           <div class="spine-title">{{ .Title }}</div>
         </a>
       {{ end }}
@@ -62,7 +62,7 @@
     <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
       {{ if gt (len $read) 25 }}
         {{ range after 25 $read }}
-          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }}; width: {{ .Params.spine_width | default 32 }}px;">
             <div class="spine-title">{{ .Title }}</div>
           </a>
         {{ end }}
@@ -72,7 +72,7 @@
       <div class="w-4 h-[210px] bg-[#2c1e14] border-x border-black/30 shadow-inner flex items-center justify-center flex-none"></div>
 
       {{ range $toread }}
-        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }}; width: {{ .Params.spine_width | default 32 }}px;">
           <div class="spine-title">{{ .Title }}</div>
         </a>
       {{ end }}

@@ -77,6 +77,7 @@ rating: {rating}
 isbn: "{isbn}"
 storygraph_url: "https://app.thestorygraph.com/browse?search_term={urllib.parse.quote(title)}"
 spine_color: "{random.choice(colors)}"
+spine_width: {random.randint(28, 45)}
 ---
 Fetched from StoryGraph.
 """

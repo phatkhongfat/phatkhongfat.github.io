@@ -63,6 +63,7 @@ rating: {rating}
 isbn: "{isbn}"
 storygraph_url: "{sg_url}"
 spine_color: "{random.choice(colors)}"
+spine_width: {random.randint(28, 45)}
 ---
 
 {row['Review'] if pd.notnull(row['Review']) else "No reflection yet."}
