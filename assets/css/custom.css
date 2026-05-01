@@ -11,6 +11,12 @@ body {
     background-color: transparent !important;
 }
 
+/* Fix StoryGraph icon color */
+[title="The StoryGraph"], .icon-storygraph {
+    fill: white !important;
+    color: white !important;
+}
+
 /* --- Digital Bookshelf Core Styles --- */
 .bookshelf-container {
     background: #050505 url('../img/bg2.gif');

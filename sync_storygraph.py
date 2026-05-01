@@ -53,9 +53,9 @@ def parse_and_sync(html_content, status_label):
         folder_path = os.path.join(base_path, folder_name)
         os.makedirs(folder_path, exist_ok=True)
         
-        # DOWNLOAD COVER FORCEFULLY
+        # DOWNLOAD COVER ONLY IF MISSING
         feature_img = os.path.join(folder_path, "feature.jpg")
-        if cover_url:
+        if cover_url and not os.path.exists(feature_img):
             try:
                 r = requests.get(cover_url, timeout=15)
                 if r.status_code == 200:
@@ -64,8 +64,23 @@ def parse_and_sync(html_content, status_label):
             except Exception as e:
                 print(f"Cover Error for {title}: {e}")
 
-        # Hugo File
+        # Hugo File - Check if we need to update
+        index_path = os.path.join(folder_path, "index.md")
         today = datetime.datetime.now().strftime('%Y-%m-%d')
+        
+        # We preserve existing spine_color and width if the file exists to avoid flickering colors on every sync
+        existing_color = random.choice(colors)
+        existing_width = random.randint(28, 45)
+        
+        if os.path.exists(index_path):
+            try:
+                with open(index_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    for line in content.split('\n'):
+                        if 'spine_color:' in line: existing_color = line.split(':')[1].strip().strip('"')
+                        if 'spine_width:' in line: existing_width = line.split(':')[1].strip()
+            except: pass
+
         content = f"""---
 title: "{title}"
 authors: ["{author}"]
@@ -76,23 +91,17 @@ status: {status_label}
 rating: {rating}
 isbn: "{isbn}"
 storygraph_url: "https://app.thestorygraph.com/browse?search_term={urllib.parse.quote(title)}"
-spine_color: "{random.choice(colors)}"
-spine_width: {random.randint(28, 45)}
+spine_color: "{existing_color}"
+spine_width: {existing_width}
 ---
 Fetched from StoryGraph.
 """
-        with open(os.path.join(folder_path, "index.md"), 'w', encoding='utf-8') as f:
+        with open(index_path, 'w', encoding='utf-8') as f:
             f.write(content)
 
 def sync_all():
-    print(f"Cleaning and Syncing StoryGraph for {USERNAME}...")
-    # Wipe old folders first
-    import shutil
-    for item in os.listdir(base_path):
-        item_path = os.path.join(base_path, item)
-        if os.path.isdir(item_path):
-            shutil.rmtree(item_path)
-
+    print(f"Syncing StoryGraph for {USERNAME}...")
+    
     # Fetch Read
     print("Fetching Read list...")
     parse_and_sync(UserScraper.books_read(USERNAME, TOKEN), "read")
@@ -102,7 +111,7 @@ def sync_all():
     # Fetch To Read
     print("Fetching To Read list...")
     parse_and_sync(UserScraper.to_read(USERNAME, TOKEN), "to-read")
-    print("\nMaster Sync Complete!")
+    print("\nSync Complete!")
 
 if __name__ == "__main__":
     sync_all()

@@ -51,12 +51,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/bookshelf/</loc>
-    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/bookshelf/%C4%91inh-trang-m%E1%BB%99ng/</loc>
     <lastmod>2026-04-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -142,12 +136,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/bookshelf/panenka/</loc>
-    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2026-04-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -243,18 +231,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/projects/labs/</loc>
-    <lastmod>2026-04-19T22:54:34-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2026-04-19T22:54:34-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/projects/labs/port-swigger/sqli/</loc>
     <lastmod>2026-04-19T22:54:34-04:00</lastmod>
     <changefreq>daily</changefreq>
@@ -263,12 +239,6 @@
   <url>
     <loc>http://localhost:1313/projects/labs/port-swigger/</loc>
     <lastmod>2026-04-19T22:46:55-04:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/projects/research/</loc>
-    <lastmod>2026-04-19T18:58:58-04:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -289,7 +259,32 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/bookshelf/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/essays/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/labs/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/projects/research/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
