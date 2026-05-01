@@ -1,12 +1,13 @@
 ---
 title: "Siddhartha"
-author: "Hermann Hesse"
-date: 2026-04-18
+authors: ["Hermann Hesse"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 4.5
-isbn: "9781453896174"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Siddhartha"
+spine_color: "#2D4263"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

@@ -1,12 +1,13 @@
 ---
 title: "Piranesi"
-author: "Susanna Clarke"
-date: 2026-04-18
+authors: ["Susanna Clarke"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
-rating: 0
-isbn: "9781635575637"
+status: read
+rating: 4.5
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Piranesi"
+spine_color: "#2C3333"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

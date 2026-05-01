@@ -1,12 +1,13 @@
 ---
 title: "The Alchemist"
-author: "Paulo Coelho"
-date: 2026-04-18
+authors: ["Paulo Coelho"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 4.75
-isbn: "9780062390622"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Alchemist"
+spine_color: "#313131"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

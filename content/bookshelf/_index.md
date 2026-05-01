@@ -1,9 +1,21 @@
 ---
-title: "The Bookshelf"
-description: "My 40-book challenge and literary journey."
-layout: "list"
-showThumbnail: true
-collumnCount: 4
+title: "Digital Library"
+layout: "simple"
+showTableOfContents: false
 ---
 
-Tracking my reading progress through 2026.
+A visual representation of my reading journey, automatically synchronized from StoryGraph.
+
+{{< grandbookcase >}}
+
+<div class="mt-32 mb-10 text-center">
+  <h2 class="text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-white">Featured Highlights</h2>
+</div>
+
+<div class="space-y-6">
+  {{< bookshowcase link="bookshelf/the-master-and-margarita" >}}
+  {{< bookshowcase link="bookshelf/crime-and-punishment" >}}
+  {{< bookshowcase link="bookshelf/meditations" >}}
+  {{< bookshowcase link="bookshelf/the-metamorphosis" >}}
+  {{< bookshowcase link="bookshelf/dune" >}}
+</div>

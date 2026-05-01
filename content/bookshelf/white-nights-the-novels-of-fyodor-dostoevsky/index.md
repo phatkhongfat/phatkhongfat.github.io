@@ -1,12 +1,13 @@
 ---
 title: "White Nights: The Novels of Fyodor Dostoevsky"
-author: "Fyodor Dostoevsky"
-date: 2026-04-18
+authors: ["Fyodor Dostoevsky"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 3.5
-isbn: "9781523606184"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=White%20Nights%3A%20The%20Novels%20of%20Fyodor%20Dostoevsky"
+spine_color: "#461111"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

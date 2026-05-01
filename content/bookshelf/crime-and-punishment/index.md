@@ -1,12 +1,13 @@
 ---
 title: "Crime and Punishment"
-author: "Fyodor Dostoevsky"
-date: 2026-04-18
+authors: ["Fyodor Dostoevsky"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 5.0
-isbn: "9780140449136"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Crime%20and%20Punishment"
+spine_color: "#0F3D3E"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

@@ -1,12 +1,13 @@
 ---
 title: "The Count of Monte Cristo"
-author: "Alexandre Dumas"
-date: 2026-04-18
+authors: ["Alexandre Dumas"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
+status: to-read
 rating: 0
-isbn: "9780140449266"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Count%20of%20Monte%20Cristo"
+spine_color: "#461111"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

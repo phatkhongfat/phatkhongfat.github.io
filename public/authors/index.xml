@@ -9,7 +9,317 @@
     <managingEditor>youremail@example.com (phatkhongfat)</managingEditor>
     <webMaster>youremail@example.com (phatkhongfat)</webMaster>
     <copyright>© 2026 phatkhongfat</copyright>
-    <atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Albert Camus</title>
+      <link>http://localhost:1313/authors/albert-camus/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/albert-camus/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Alexandre Dumas</title>
+      <link>http://localhost:1313/authors/alexandre-dumas/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/alexandre-dumas/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Don Carpenter</title>
+      <link>http://localhost:1313/authors/don-carpenter/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/don-carpenter/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Frank Herbert</title>
+      <link>http://localhost:1313/authors/frank-herbert/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/frank-herbert/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Franz Kafka</title>
+      <link>http://localhost:1313/authors/franz-kafka/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/franz-kafka/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Fredrik Backman</title>
+      <link>http://localhost:1313/authors/fredrik-backman/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/fredrik-backman/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Fyodor Dostoevsky</title>
+      <link>http://localhost:1313/authors/fyodor-dostoevsky/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/fyodor-dostoevsky/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>George Saunders</title>
+      <link>http://localhost:1313/authors/george-saunders/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/george-saunders/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hans Christian Andersen</title>
+      <link>http://localhost:1313/authors/hans-christian-andersen/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/hans-christian-andersen/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hermann Hesse</title>
+      <link>http://localhost:1313/authors/hermann-hesse/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/hermann-hesse/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>James Clear</title>
+      <link>http://localhost:1313/authors/james-clear/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/james-clear/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>John Grisham</title>
+      <link>http://localhost:1313/authors/john-grisham/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/john-grisham/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>John Steinbeck</title>
+      <link>http://localhost:1313/authors/john-steinbeck/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/john-steinbeck/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>John Williams</title>
+      <link>http://localhost:1313/authors/john-williams/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/john-williams/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Marcus Aurelius</title>
+      <link>http://localhost:1313/authors/marcus-aurelius/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/marcus-aurelius/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Markus Zusak</title>
+      <link>http://localhost:1313/authors/markus-zusak/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/markus-zusak/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Matt Dinniman</title>
+      <link>http://localhost:1313/authors/matt-dinniman/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/matt-dinniman/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Miguel Ruiz</title>
+      <link>http://localhost:1313/authors/miguel-ruiz/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/miguel-ruiz/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mikhail Bulgakov</title>
+      <link>http://localhost:1313/authors/mikhail-bulgakov/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/mikhail-bulgakov/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Minh Thương</title>
+      <link>http://localhost:1313/authors/minh-th%C6%B0%C6%A1ng/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/minh-th%C6%B0%C6%A1ng/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mo Yan</title>
+      <link>http://localhost:1313/authors/mo-yan/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/mo-yan/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Paulo Coelho</title>
+      <link>http://localhost:1313/authors/paulo-coelho/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/paulo-coelho/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ray Bradbury</title>
+      <link>http://localhost:1313/authors/ray-bradbury/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/ray-bradbury/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Rónán Hession</title>
+      <link>http://localhost:1313/authors/r%C3%B3n%C3%A1n-hession/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/r%C3%B3n%C3%A1n-hession/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Stefan Zweig</title>
+      <link>http://localhost:1313/authors/stefan-zweig/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/stefan-zweig/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Steven Erikson</title>
+      <link>http://localhost:1313/authors/steven-erikson/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/steven-erikson/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Susanna Clarke</title>
+      <link>http://localhost:1313/authors/susanna-clarke/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/susanna-clarke/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Viktor E. Frankl</title>
+      <link>http://localhost:1313/authors/viktor-e.-frankl/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/viktor-e.-frankl/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Yan Lianke</title>
+      <link>http://localhost:1313/authors/yan-lianke/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/yan-lianke/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Yasunari Kawabata</title>
+      <link>http://localhost:1313/authors/yasunari-kawabata/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/yasunari-kawabata/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Yukio Mishima</title>
+      <link>http://localhost:1313/authors/yukio-mishima/</link>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (phatkhongfat)</author>
+      <guid>http://localhost:1313/authors/yukio-mishima/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>

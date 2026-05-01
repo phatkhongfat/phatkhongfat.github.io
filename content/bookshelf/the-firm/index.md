@@ -1,12 +1,13 @@
 ---
 title: "The Firm"
-author: "John Grisham"
-date: 2026-04-18
+authors: ["John Grisham"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 3.75
-isbn: "9780099830009"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Firm"
+spine_color: "#2C3333"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

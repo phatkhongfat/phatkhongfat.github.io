@@ -1,12 +1,13 @@
 ---
 title: "The Brief and Frightening Reign of Phil"
-author: "George Saunders"
-date: 2026-04-18
+authors: ["George Saunders"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 5.0
-isbn: "9781594481529"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Brief%20and%20Frightening%20Reign%20of%20Phil"
+spine_color: "#2D4263"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

@@ -1,12 +1,13 @@
 ---
 title: "Gardens of the Moon"
-author: "Steven Erikson"
-date: 2026-04-18
+authors: ["Steven Erikson"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
-rating: 0
-isbn: "9781429926584"
+status: read
+rating: 5.0
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Gardens%20of%20the%20Moon"
+spine_color: "#2C3333"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

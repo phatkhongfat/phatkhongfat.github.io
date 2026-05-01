@@ -1,12 +1,13 @@
 ---
 title: "Fahrenheit 451"
-author: "Ray Bradbury"
-date: 2026-04-18
+authors: ["Ray Bradbury"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 3.5
-isbn: "9781451673319"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Fahrenheit%20451"
+spine_color: "#3E432E"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

@@ -1,12 +1,13 @@
 ---
 title: "Dune"
-author: "Frank Herbert"
-date: 2026-04-18
+authors: ["Frank Herbert"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 4.25
-isbn: "9780593099322"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Dune"
+spine_color: "#3E432E"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

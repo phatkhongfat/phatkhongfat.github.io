@@ -1,12 +1,13 @@
 ---
 title: "Meditations"
-author: "Marcus Aurelius"
-date: 2026-04-18
+authors: ["Marcus Aurelius"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 4.0
-isbn: "9780140449334"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Meditations"
+spine_color: "#100720"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

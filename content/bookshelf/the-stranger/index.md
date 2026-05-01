@@ -1,12 +1,13 @@
 ---
 title: "The Stranger"
-author: "Albert Camus"
-date: 2026-04-18
+authors: ["Albert Camus"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 5.0
-isbn: "9780881032475"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Stranger"
+spine_color: "#3E432E"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

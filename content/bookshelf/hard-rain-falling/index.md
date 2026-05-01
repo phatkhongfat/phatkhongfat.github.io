@@ -1,12 +1,13 @@
 ---
 title: "Hard Rain Falling"
-author: "Don Carpenter"
-date: 2026-04-18
+authors: ["Don Carpenter"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
+status: to-read
 rating: 0
-isbn: "9781590173244"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Hard%20Rain%20Falling"
+spine_color: "#461111"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

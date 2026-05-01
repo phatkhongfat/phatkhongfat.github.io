@@ -1,12 +1,13 @@
 ---
 title: "Deadhouse Gates"
-author: "Steven Erikson"
-date: 2026-04-18
+authors: ["Steven Erikson"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
+status: to-read
 rating: 0
-isbn: "9780765310026"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Deadhouse%20Gates"
+spine_color: "#541212"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

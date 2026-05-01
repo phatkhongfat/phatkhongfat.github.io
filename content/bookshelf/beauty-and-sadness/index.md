@@ -1,12 +1,13 @@
 ---
 title: "Beauty and Sadness"
-author: "Yasunari Kawabata"
-date: 2026-04-18
+authors: ["Yasunari Kawabata"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 3.75
-isbn: "9780679761051"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Beauty%20and%20Sadness"
+spine_color: "#191919"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

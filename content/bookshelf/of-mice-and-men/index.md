@@ -1,12 +1,13 @@
 ---
 title: "Of Mice and Men"
-author: "John Steinbeck"
-date: 2026-04-18
+authors: ["John Steinbeck"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 0
-isbn: "9780140186420"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Of%20Mice%20and%20Men"
+spine_color: "#2C3333"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

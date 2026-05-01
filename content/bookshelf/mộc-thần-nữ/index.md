@@ -1,12 +1,13 @@
 ---
 title: "Mộc thần nữ"
-author: "Hans Christian Andersen"
-date: 2026-04-18
+authors: ["Hans Christian Andersen"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
+status: to-read
 rating: 0
-isbn: "9786043835557"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=M%E1%BB%99c%20th%E1%BA%A7n%20n%E1%BB%AF"
+spine_color: "#2C3333"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

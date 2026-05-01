@@ -1,0 +1,84 @@
+<div class="bookshelf-container not-prose mt-12 mb-16">
+  
+  {{/* 1. DATA COLLECTION */}}
+  {{ $current := slice }}
+  {{ $read := slice }}
+  {{ $toread := slice }}
+  
+  {{ range (where .Site.RegularPages "Section" "bookshelf") }}
+    {{ if eq .Params.status "currently-reading" }}{{ $current = $current | append . }}{{ end }}
+    {{ if eq .Params.status "read" }}{{ $read = $read | append . }}{{ end }}
+    {{ if eq .Params.status "to-read" }}{{ $toread = $toread | append . }}{{ end }}
+  {{ end }}
+
+  {{/* Combine all for total count */}}
+  {{ $all_books := $current | append $read | append $toread }}
+  
+  <div class="mb-12 text-center relative">
+    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+      <div class="w-full border-t border-neutral-200 dark:border-neutral-800"></div>
+    </div>
+    <div class="relative flex justify-center">
+      <span class="bg-neutral-50 dark:bg-neutral-900 px-8 text-xs uppercase tracking-[0.4em] text-neutral-900 dark:text-neutral-100 font-extrabold">
+        The Master Collection ({{ len $all_books }})
+      </span>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-y-16">
+    
+    {{/* SHELF 1: Currently Reading & Start of Read History */}}
+    <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
+      {{ if gt (len $current) 0 }}
+        {{ range $current }}
+          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+             {{/* Glow effect for currently reading */}}
+             <div class="absolute inset-0 bg-white/10 animate-pulse pointer-events-none"></div>
+             <div class="spine-title">{{ .Title }}</div>
+          </a>
+        {{ end }}
+        <div class="shelf-decoration decoration-skull"></div>
+      {{ end }}
+
+      {{ range first 10 $read }}
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+          <div class="spine-title">{{ .Title }}</div>
+        </a>
+      {{ end }}
+    </div>
+
+    {{/* SHELF 2: Middle of Read History */}}
+    {{ if gt (len $read) 10 }}
+    <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
+      {{ range first 15 (after 10 $read) }}
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+          <div class="spine-title">{{ .Title }}</div>
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{/* SHELF 3: End of Read History & To-Read Pile */}}
+    <div class="spine-shelf flex flex-wrap justify-center items-end gap-1">
+      {{ if gt (len $read) 25 }}
+        {{ range after 25 $read }}
+          <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+            <div class="spine-title">{{ .Title }}</div>
+          </a>
+        {{ end }}
+      {{ end }}
+
+      {{/* Wood Divider */}}
+      <div class="w-4 h-[210px] bg-[#2c1e14] border-x border-black/30 shadow-inner flex items-center justify-center flex-none"></div>
+
+      {{ range $toread }}
+        <a href="{{ .RelPermalink }}" class="book-spine" style="background-color: {{ .Params.spine_color }};">
+          <div class="spine-title">{{ .Title }}</div>
+        </a>
+      {{ end }}
+      
+      <div class="shelf-decoration decoration-plant"></div>
+    </div>
+
+  </div>
+</div>

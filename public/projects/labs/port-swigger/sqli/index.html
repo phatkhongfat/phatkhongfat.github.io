@@ -119,8 +119,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.d4716724f3aef4c1e74deacf98b60c5878edc7bccad8a338eef0e7a55230a9443b733d836adfd35371420f67a094b371da19b6e7cbd6b8eb92c27adaade739fa.css"
-    integrity="sha512-1HFnJPOu9MHnTerPmLYMWHjtx7zK2KM47vDnpVIwqUQ7cz2Dat/TU3FCD2eglLNx2hm258vWuOuSwnrarec5&#43;g==">
+    href="/css/main.bundle.min.54bb9b7d462aef4efd071c9f8a3b88b2200640c3b2f9df1983cfa616c0c68692fb37354da419dd71d5b8b74a0195f3138cea719ed0a5a06746a60b66280b186c.css"
+    integrity="sha512-VLubfUYq7079BxyfijuIsiAGQMOy&#43;d8Zg8&#43;mFsDGhpL7NzVNpBndcdW4t0oBlfMTjOpxntCloGdGpgtmKAsYbA==">
 
   
   
@@ -243,7 +243,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2790"
+    "wordCount": "3259"
   }]
   </script>
 
@@ -841,6 +841,12 @@
         <li><a href="#solution-5">Solution</a></li>
       </ul>
     </li>
+    <li><a href="#lab-blind-sql-injection-with-conditional-responses">Lab: Blind SQL injection with conditional responses</a>
+      <ul>
+        <li><a href="#goal">Goal</a></li>
+        <li><a href="#solution-6">Solution</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -888,6 +894,12 @@
       <ul>
         <li><a href="#description-5">Description</a></li>
         <li><a href="#solution-5">Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#lab-blind-sql-injection-with-conditional-responses">Lab: Blind SQL injection with conditional responses</a>
+      <ul>
+        <li><a href="#goal">Goal</a></li>
+        <li><a href="#solution-6">Solution</a></li>
       </ul>
     </li>
   </ul>
@@ -1656,6 +1668,154 @@ In modern, non-Oracle databases (like PostgreSQL, MySQL, and Microsoft SQL Serve
     fetchpriority="low"
     alt=""
     src="Pasted%20image%2020260426113320.png"
+    ></figure>
+</p>
+</li>
+</ol>
+<p>Ah, I apologize for the oversight! Here is the rewritten writeup for the Blind SQL Injection lab, strictly following the formatting, tone, and layout requirements.</p>
+<hr>
+
+<h2 class="relative group">Lab: Blind SQL injection with conditional responses
+    <div id="lab-blind-sql-injection-with-conditional-responses" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#lab-blind-sql-injection-with-conditional-responses" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">Goal
+    <div id="goal" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#goal" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Enumerate the administrator&rsquo;s password and log into their account by exploiting a boolean-based blind SQL injection vulnerability in the tracking cookie.</p>
+
+<h3 class="relative group">Solution
+    <div id="solution-6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#solution-6" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p><strong>The Mechanism</strong>
+The application uses a tracking cookie for analytics and executes a backend SQL query containing the cookie&rsquo;s value. Although the query results are not directly displayed, the application&rsquo;s response changes conditionally: if the query evaluates to true, a &ldquo;Welcome back!&rdquo; message is rendered on the page. We can exploit this boolean behavior to infer sensitive data, character by character, by injecting conditional subqueries that force the application to return this identifiable message only when our guess is correct.</p>
+<p><strong>The Payload(s)</strong></p>
+<ul>
+<li><strong>Raw Payload:</strong> <code>' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a'--</code></li>
+<li><strong>Resulting Backend Query (Conceptual):</strong> <code>SELECT tracking-id FROM tracking-table WHERE trackingId = 'xyz' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a'--'</code></li>
+<li><strong>Syntax Breakdown:</strong>
+<ul>
+<li><code>'</code>: Breaks out of the original string parameter.</li>
+<li><code>AND</code>: Ensures both the original tracking ID condition AND our injected subquery must evaluate to true for the page to render the &ldquo;Welcome back!&rdquo; message.</li>
+<li><code>(SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')</code>: Extracts a single character from the target password at a specific index position.</li>
+<li><code>='a'</code>: The boolean test comparing the extracted character to our guessed character.</li>
+<li><code>--</code>: Comments out the remainder of the original backend query to prevent syntax errors.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Execution Steps</strong></p>
+<ol>
+<li>
+<p><strong>Intercept</strong> the HTTP request for the home page using <strong>Burp Suite</strong>.</p>
+</li>
+<li>
+<p><strong>Send</strong> the captured request to <strong>Intruder</strong> (<code>Ctrl+I</code> / <code>Cmd+I</code>).</p>
+</li>
+<li>
+<p><strong>Navigate</strong> to the <strong>Positions</strong> tab and <strong>click Clear §</strong> to remove all default payload markers.</p>
+</li>
+<li>
+<p><strong>Modify</strong> the <code>TrackingId</code> cookie value to append the base injection string: <code>TrackingId=xyz' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='a'--</code></p>
+</li>
+<li>
+<p><strong>Highlight</strong> the index number (<code>1</code>) and <strong>click Add §</strong>.</p>
+</li>
+<li>
+<p><strong>Highlight</strong> the guessed character (<code>a</code>) and <strong>click Add §</strong>. The final marked payload should look like this: <code>...SUBSTRING(password,§1§,1)...='§a§'--</code></p>
+</li>
+<li>
+<p><strong>Change</strong> the <strong>Attack type</strong> dropdown to <strong>Cluster bomb</strong>.</p>
+</li>
+<li>
+<p><strong>Navigate</strong> to the <strong>Payloads</strong> tab and <strong>select</strong> Payload set <code>1</code>.</p>
+</li>
+<li>
+<p><strong>Change</strong> the Payload type to <strong>Numbers</strong>, and <strong>configure</strong> the range from <code>1</code> to <code>20</code> with a step of <code>1</code> (assuming a standard 20-character password length).
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260428091515.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Select</strong> Payload set <code>2</code>.</p>
+</li>
+<li>
+<p><strong>Change</strong> the Payload type to <strong>Simple list</strong>, and <strong>input</strong> all lowercase alphanumeric characters (<code>a-z</code>, <code>0-9</code>).
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260428091528.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Navigate</strong> to the <strong>Settings</strong> tab, <strong>scroll</strong> down to the <strong>Grep - Match</strong> section, and <strong>add</strong> the literal string <code>Welcome back!</code>.</p>
+</li>
+<li>
+<p><strong>Click Start attack</strong>.</p>
+</li>
+<li>
+<p><strong>Sort</strong> the attack results by the newly created &ldquo;Welcome back!&rdquo; column to instantly identify the successful hits.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260428091613.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Compile</strong> the matching characters in sequential order based on their index (Payload 1) to reveal the complete administrator password.</p>
+</li>
+<li>
+<p><strong>Navigate</strong> to the target&rsquo;s login page.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260428104322.png"
+    ></figure>
+</p>
+</li>
+<li>
+<p><strong>Log in</strong> using the username <code>administrator</code> and the compiled password.
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="Pasted%20image%2020260428104345.png"
     ></figure>
 </p>
 </li>

@@ -1,12 +1,13 @@
 ---
 title: "Vụ án"
-author: "Franz Kafka"
-date: 2026-04-18
+authors: ["Franz Kafka"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "currently-reading"
-rating: 0
-isbn: "9786046946762"
+status: read
+rating: 3.0
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=V%E1%BB%A5%20%C3%A1n"
+spine_color: "#0F3D3E"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

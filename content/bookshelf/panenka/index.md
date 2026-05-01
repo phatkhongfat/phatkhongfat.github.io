@@ -1,12 +1,13 @@
 ---
 title: "Panenka"
-author: "Rónán Hession"
-date: 2026-04-18
+authors: ["Rónán Hession"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 0
-isbn: "9781910422670"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Panenka"
+spine_color: "#541212"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

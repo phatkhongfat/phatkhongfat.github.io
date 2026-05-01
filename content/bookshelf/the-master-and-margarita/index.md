@@ -1,12 +1,13 @@
 ---
 title: "The Master and Margarita"
-author: "Mikhail Bulgakov"
-date: 2026-04-18
+authors: ["Mikhail Bulgakov"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
-rating: 0
-isbn: "9786043205480"
+status: read
+rating: 5.0
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Master%20and%20Margarita"
+spine_color: "#313131"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

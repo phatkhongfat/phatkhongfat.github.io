@@ -1,0 +1,81 @@
+{{ $link := .Get "link" }}
+{{ $page := .Site.GetPage $link }}
+{{ if $page }}
+<div class="book-showcase relative group flex flex-col sm:flex-row gap-4 p-4 rounded-xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 my-6 shadow-sm hover:shadow-md transition-shadow not-prose">
+  <div class="flex-shrink-0 w-24 sm:w-28 shadow-md rounded-md overflow-hidden bg-neutral-200 dark:bg-neutral-900 self-center sm:self-start">
+    {{ $feature := $page.Resources.GetMatch "feature*" }}
+    {{ if not $feature }}
+        {{ $feature = $page.Resources.GetMatch "feature.jpg" }}
+    {{ end }}
+    
+    {{ if $feature }}
+      {{ $processed := $feature.Fill "240x360 Center" }}
+      <img src="{{ $processed.RelPermalink }}" alt="{{ $page.Title }}" class="w-full object-cover m-0">
+    {{ else }}
+      <div class="flex items-center justify-center h-36 text-neutral-400">
+        {{ partial "icon.html" "image" }}
+      </div>
+    {{ end }}
+  </div>
+
+  <!-- Content Container -->
+  <div class="flex flex-col justify-between flex-grow">
+    <div>
+      <h3 class="text-lg font-bold !mt-0 !mb-0 text-neutral-800 dark:text-neutral-100 leading-tight">
+        <a href="{{ $page.RelPermalink }}" class="before:absolute before:inset-0 !no-underline !text-inherit">
+          {{ $page.Title }}
+        </a>
+      </h3>
+      <p class="text-neutral-500 dark:text-neutral-400 font-medium mb-1 text-sm">
+        by {{ if $page.Params.authors }}{{ delimit $page.Params.authors ", " }}{{ else }}{{ $page.Params.author }}{{ end }}
+      </p>
+      
+      <div class="flex items-center mt-1">
+        <div class="flex relative">
+          {{ $rating := float ($page.Params.rating | default 0) }}
+          {{ range seq 5 }}
+            {{ $index := . }}
+            <div class="relative w-4 h-4">
+              <div class="absolute inset-0 text-neutral-300 dark:text-neutral-600">
+                {{ partial "icon.html" "star" }}
+              </div>
+              {{ if ge $rating $index }}
+                <div class="absolute inset-0 overflow-hidden" style="color: #fde68a !important;">
+                  {{ partial "icon.html" "star" }}
+                </div>
+              {{ else if gt $rating (sub $index 1) }}
+                {{ $width := (mul (sub $rating (sub $index 1)) 100) }}
+                <div class="absolute inset-0 overflow-hidden" style="width: {{ $width }}%; color: #fde68a !important;">
+                  {{ partial "icon.html" "star" }}
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        <span class="ml-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide
+          {{ if eq $page.Params.status "read" }} bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400
+          {{ else if eq $page.Params.status "currently-reading" }} bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400
+          {{ else }} bg-neutral-100 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-300 {{ end }}">
+          {{ replace $page.Params.status "-" " " }}
+        </span>
+      </div>
+
+      <div class="mt-2 text-xs text-neutral-600 dark:text-neutral-400 line-clamp-2 leading-snug">
+        {{ $page.Summary | plainify }}
+      </div>
+    </div>
+    
+    <div class="mt-4 relative z-20">
+      {{ if .Params.storygraph_url }}
+        <a href="{{ .Params.storygraph_url }}" target="_blank" class="inline-block px-3 py-1.5 border border-neutral-300 dark:border-neutral-600 !no-underline rounded-lg text-[11px] font-bold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all text-neutral-700 dark:text-neutral-300">
+          StoryGraph &nearr;
+        </a>
+      {{ else if $page.Params.isbn }}
+        <a href="https://app.thestorygraph.com/browse?search_term={{ $page.Params.isbn }}" target="_blank" class="inline-block px-3 py-1.5 border border-neutral-300 dark:border-neutral-600 !no-underline rounded-lg text-[11px] font-bold hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-all text-neutral-700 dark:text-neutral-300">
+          StoryGraph &nearr;
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

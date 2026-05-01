@@ -1,12 +1,13 @@
 ---
 title: "The Book Thief"
-author: "Markus Zusak"
-date: 2026-04-18
+authors: ["Markus Zusak"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "to-read"
+status: to-read
 rating: 0
-isbn: "9780375831003"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=The%20Book%20Thief"
+spine_color: "#100720"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

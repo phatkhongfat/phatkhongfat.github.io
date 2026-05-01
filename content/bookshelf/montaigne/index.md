@@ -1,12 +1,13 @@
 ---
 title: "Montaigne"
-author: "Stefan Zweig"
-date: 2026-04-18
+authors: ["Stefan Zweig"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 4.25
 isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Montaigne"
+spine_color: "#100720"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.

@@ -1,0 +1,91 @@
+{{ define "main" }}
+<article class="max-w-3xl mx-auto px-6 pt-12 pb-24">
+  
+  {{/* Header & Spotlight */}}
+  <header class="flex flex-col items-center text-center mb-16">
+    
+    {{/* Physical Book Cover */}}
+    <div class="w-32 sm:w-40 mb-8">
+      {{ $image := .Resources.GetMatch "feature*" }}
+      {{ if not $image }}
+        {{ $image = .Resources.GetMatch "feature.jpg" }}
+      {{ end }}
+
+      {{ with $image }}
+        {{ $image = .Resize "400x" }}
+        <img src="{{ $image.RelPermalink }}" 
+             class="rounded-r shadow-[10px_10px_20px_rgba(0,0,0,0.4)] dark:shadow-[10px_10px_20px_rgba(0,0,0,0.7)] border-l-2 border-black/20" 
+             alt="{{ $.Title }}">
+      {{ end }}
+    </div>
+
+
+    <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 text-neutral-900 dark:text-white tracking-tight">{{ .Title }}</h1>
+    <p class="text-xl text-neutral-500 dark:text-neutral-400 font-serif italic mb-10">
+      by {{ if .Params.authors }}{{ delimit .Params.authors ", " }}{{ else }}Unknown Author{{ end }}
+    </p>
+
+    {{/* Forced-Space Metadata Row */}}
+    <div class="w-full max-w-2xl border-y border-neutral-200 dark:border-neutral-800 py-6 flex flex-row items-center justify-center gap-x-12 sm:gap-x-16 whitespace-nowrap">
+      
+      <div class="flex items-center gap-3">
+        <div class="flex relative">
+          {{ $rating := float (.Params.rating | default 0) }}
+
+          {{ range seq 5 }}
+            {{ $index := . }}
+            <div class="relative w-4 h-4">
+              <div class="absolute inset-0 text-neutral-300 dark:text-neutral-600">
+                {{ partial "icon.html" "star" }}
+              </div>
+              {{ if ge $rating $index }}
+                <div class="absolute inset-0 overflow-hidden" style="color: #fde68a !important;">
+                  {{ partial "icon.html" "star" }}
+                </div>
+              {{ else if gt $rating (sub $index 1) }}
+                {{ $width := (mul (sub $rating (sub $index 1)) 100) }}
+                <div class="absolute inset-0 overflow-hidden" style="width: {{ $width }}%; color: #fde68a !important;">
+                  {{ partial "icon.html" "star" }}
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+        <span class="font-bold text-lg text-neutral-900 dark:text-neutral-100">{{ .Params.rating }}</span>
+      </div>
+
+      <span class="text-neutral-200 dark:text-neutral-800 flex-shrink-0 font-light text-2xl">|</span>
+
+      {{/* Status */}}
+      <span class="uppercase tracking-[0.2em] font-bold text-[11px] text-neutral-500 dark:text-neutral-400 flex-shrink-0">
+        {{ replace .Params.status "-" " " }}
+      </span>
+
+      <span class="text-neutral-200 dark:text-neutral-800 flex-shrink-0 font-light text-2xl">|</span>
+
+      {{/* Link */}}
+      <div class="flex-shrink-0">
+        {{ if .Params.storygraph_url }}
+          <a href="{{ .Params.storygraph_url }}" target="_blank" class="uppercase tracking-[0.2em] font-bold text-[11px] text-neutral-900 dark:text-neutral-100 hover:text-primary-500 transition-colors">
+            StoryGraph &nearr;
+          </a>
+        {{ else }}
+          <span class="text-neutral-300 dark:text-neutral-700">--</span>
+        {{ end }}
+      </div>
+
+    </div>
+  </header>
+
+  {{/* Main Content */}}
+  <section class="prose dark:prose-invert prose-lg mx-auto font-serif leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left">
+    {{ .Content }}
+  </section>
+
+  {{/* Navigation */}}
+  <footer class="mt-24 pt-8 border-t border-neutral-200 dark:border-neutral-800">
+    {{ partial "article-pagination.html" . }}
+  </footer>
+
+</article>
+{{ end }}

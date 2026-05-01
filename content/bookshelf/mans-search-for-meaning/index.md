@@ -1,12 +1,13 @@
 ---
 title: "Man's Search for Meaning"
-author: "Viktor E. Frankl"
-date: 2026-04-18
+authors: ["Viktor E. Frankl"]
+date: 2026-04-29
 feature: "feature.jpg"
 thumbnail: "feature.jpg"
-status: "read"
+status: read
 rating: 5.0
-isbn: "9780807014295"
+isbn: ""
+storygraph_url: "https://app.thestorygraph.com/browse?search_term=Man%27s%20Search%20for%20Meaning"
+spine_color: "#191919"
 ---
-
-No reflection yet.
+Fetched from StoryGraph.
