@@ -163,7 +163,9 @@ body {
 
 /* --- Featured Book Showcase --- */
 .book-showcase {
-    background: transparent !important;
+    background: rgba(255,255,255,0.05) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
