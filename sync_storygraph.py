@@ -100,7 +100,14 @@ Fetched from StoryGraph.
             f.write(content)
 
 def sync_all():
-    print(f"Syncing StoryGraph for {USERNAME}...")
+    print(f"Cleaning and Syncing StoryGraph for {USERNAME}...")
+    
+    # Wipe old folders to ensure a fresh, randomized look every time
+    import shutil
+    for item in os.listdir(base_path):
+        item_path = os.path.join(base_path, item)
+        if os.path.isdir(item_path):
+            shutil.rmtree(item_path)
     
     # Fetch Read
     print("Fetching Read list...")
