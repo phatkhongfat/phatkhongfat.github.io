@@ -4,7 +4,7 @@
 <div class="book-showcase relative group flex flex-col sm:flex-row gap-5 p-5 rounded-2xl border border-white/10 bg-white/5 backdrop-filter backdrop-blur-lg my-8 shadow-xl hover:shadow-2xl transition-all duration-500 not-prose">
   
   {{/* Book Cover with 3D Elevation */}}
-  <div class="flex-shrink-0 w-18 sm:w-22 shadow-2xl rounded-md overflow-hidden bg-neutral-900 self-center sm:self-start transform group-hover:-translate-y-1 group-hover:rotate-[-1deg] transition-all duration-500 opacity-90 group-hover:opacity-100">
+  <div class="flex-shrink-0 w-18 sm:w-22 shadow-2xl rounded-md overflow-hidden bg-neutral-900 self-start transform group-hover:-translate-y-1 group-hover:rotate-[-1deg] transition-all duration-500 opacity-90 group-hover:opacity-100">
     {{ $feature := $page.Resources.GetMatch "feature*" }}
     {{ if not $feature }}{{ $feature = $page.Resources.GetMatch "feature.jpg" }}{{ end }}
     
@@ -19,7 +19,7 @@
   </div>
 
   {{/* Content Container */}}
-  <div class="flex flex-col justify-between flex-grow text-center sm:text-left">
+  <div class="flex flex-col justify-between flex-grow text-left">
     <div>
       <h3 class="text-lg font-bold !mt-0 !mb-0.5 text-neutral-100 leading-tight tracking-tight group-hover:text-white transition-colors">
         <a href="{{ $page.RelPermalink }}" class="before:absolute before:inset-0 !no-underline !text-inherit">
@@ -31,7 +31,7 @@
       </p>
       
       {{ $rating := float ($page.Params.rating | default 0) }}
-      <div class="flex items-center justify-center sm:justify-start gap-3 mt-1 mb-3" aria-label="Rating: {{ $rating }} out of 5 stars">
+      <div class="flex items-center justify-start gap-3 mt-1 mb-3" aria-label="Rating: {{ $rating }} out of 5 stars">
         <div class="flex relative">
           {{ range seq 5 }}
             {{ $index := . }}
@@ -70,7 +70,7 @@
       </div>
     </div>
     
-    <div class="mt-4 relative z-20 flex justify-center sm:justify-start">
+    <div class="mt-4 relative z-20 flex justify-start">
       {{ $sg_url := .Params.storygraph_url | default (print "https://app.thestorygraph.com/browse?search_term=" ($page.Params.isbn | default $page.Title)) }}
       <a href="{{ $sg_url }}" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 bg-white/5 hover:bg-white/10 border border-white/10 !no-underline rounded-lg text-[10px] font-bold transition-all text-neutral-200 hover:text-white backdrop-blur-md">
         {{ partial "icon.html" "storygraph" }}
