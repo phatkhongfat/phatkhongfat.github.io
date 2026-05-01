@@ -1,9 +1,14 @@
 /* --- Global Background --- */
 body {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../img/trees.gif') !important;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('../img/trees.gif') !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
+    transition: background 0.3s ease;
+}
+
+.dark body {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('../img/trees.gif') !important;
 }
 
 /* Ensure the main background wrapper in Blowfish doesn't block the body background */
@@ -13,28 +18,30 @@ body {
 
 /* Fix StoryGraph icon color */
 [title="The StoryGraph"], .icon-storygraph {
-    fill: white !important;
-    color: white !important;
+    fill: currentColor !important;
 }
 
 /* --- Digital Bookshelf Core Styles --- */
 .bookshelf-container {
-    background: #050505 url('../img/bg2.gif');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: soft-light;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 60px 40px;
     border-radius: 12px;
     margin: 2rem 0;
-    border: 1px solid rgba(255,255,255,0.05);
-    /* Perspective for 3D children */
+    border: 1px solid rgba(0,0,0,0.05);
     perspective: 1000px;
-    box-shadow: 
-        0 30px 60px rgba(0,0,0,0.8),
-        inset 0 0 100px #000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1), inset 0 0 50px rgba(255,255,255,0.5);
     position: relative;
     overflow: hidden;
+}
+
+.dark .bookshelf-container {
+    background: #050505 url('../img/bg2.gif');
+    background-blend-mode: soft-light;
+    background-size: cover;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 0 100px #000;
 }
 
 .spine-shelf {
@@ -43,31 +50,38 @@ body {
     align-items: flex-end;
     justify-content: center;
     gap: 2px;
-    padding: 0 20px 0 20px; /* Fixed: padding-bottom 0 to touch the shelf */
+    padding: 0 20px 0 20px;
     margin-bottom: 50px;
     min-height: 180px;
     position: relative;
     transform-style: preserve-3d;
-    
-    /* The "Floor" of the shelf */
+    border-bottom: 14px solid rgba(200,200,200,0.8);
+    background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.3) 100%);
+}
+
+.dark .spine-shelf {
     border-bottom: 14px solid rgba(20,20,20,0.8);
     background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 100%);
 }
 
-/* The "Back Wall" of the shelf - now Glassmorphic */
+/* The "Back Wall" of the shelf */
 .spine-shelf::before {
     content: "";
     position: absolute;
     inset: -10px 0 0 0;
-    background: rgba(255,255,255,0.03);
+    background: rgba(255,255,255,0.1);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 
-        inset 0 20px 40px rgba(0,0,0,0.4),
-        0 10px 20px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: inset 0 20px 40px rgba(255,255,255,0.2);
     transform: translateZ(-20px);
     z-index: -1;
     border-radius: 4px;
+}
+
+.dark .spine-shelf::before {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: inset 0 20px 40px rgba(0,0,0,0.4), 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .book-spine {
@@ -78,18 +92,19 @@ body {
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
-    border-left: 1px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(0,0,0,0.4);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-right: 1px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
-    
-    /* 3D Depth */
     transform: translateZ(0px);
-    box-shadow: 
-        3px 3px 10px rgba(0,0,0,0.5), /* Shadow on the back wall */
-        inset -1px 0 3px rgba(0,0,0,0.2);
-    
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     border-radius: 2px 2px 0 0;
     z-index: 2;
+}
+
+.dark .book-spine {
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5), inset -1px 0 3px rgba(0,0,0,0.2);
 }
 
 /* Decorative Gold/Silver lines at top and bottom */
@@ -100,8 +115,8 @@ body {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
-    box-shadow: 0 160px 0 rgba(255,215,0,0.4);
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent);
+    box-shadow: 0 160px 0 rgba(255,215,0,0.3);
     z-index: 1;
 }
 
@@ -110,19 +125,18 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, 
-        rgba(255,255,255,0.1) 0%, 
-        transparent 20%, 
-        transparent 80%, 
-        rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, transparent 20%, transparent 80%, rgba(0,0,0,0.15) 100%);
     pointer-events: none;
 }
 
 .book-spine:hover {
-    transform: translateY(-15px) scale(1.05);
-    z-index: 50;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8);
-    filter: brightness(1.2) contrast(1.1);
+    transform: translateZ(40px) translateY(-10px) rotateY(-5deg);
+    z-index: 100;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+}
+
+.dark .book-spine:hover {
+    box-shadow: 20px 20px 40px rgba(0,0,0,0.8), 0 0 15px rgba(255,255,255,0.1);
 }
 
 .spine-title {
@@ -131,19 +145,24 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
     white-space: nowrap;
-    color: rgba(245, 245, 220, 0.9); /* Antique white */
+    color: rgba(255, 255, 255, 0.95);
     font-size: 0.65rem;
     font-family: serif;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     width: 140px;
     text-align: center;
     pointer-events: none;
     overflow: hidden;
     text-overflow: ellipsis;
-    z-index: 2;
+    z-index: 5;
+}
+
+.dark .spine-title {
+    color: rgba(245, 245, 220, 0.9);
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
 /* Decorative Items */
@@ -152,25 +171,40 @@ body {
     height: 50px;
     align-self: flex-end;
     margin-bottom: 2px;
+    opacity: 0.4;
+    filter: grayscale(1);
+}
+
+.dark .shelf-decoration {
     opacity: 0.6;
     filter: grayscale(1) brightness(0.5);
 }
 
 .decoration-skull {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="white" d="M224 0c-98.3 0-160 76.5-160 176 0 32.3 8.3 64 24 92.2V384c0 17.7 14.3 32 32 32h14.5c18.5 45.4 63.4 77.1 115.5 77.1s97-31.7 115.5-77.1H360c17.7 0 32-14.3 32-32V268.2c15.7-28.2 24-59.9 24-92.2C416 76.5 354.3 0 256 0H224z"/></svg>') no-repeat center bottom;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 0c-98.3 0-160 76.5-160 176 0 32.3 8.3 64 24 92.2V384c0 17.7 14.3 32 32 32h14.5c18.5 45.4 63.4 77.1 115.5 77.1s97-31.7 115.5-77.1H360c17.7 0 32-14.3 32-32V268.2c15.7-28.2 24-59.9 24-92.2C416 76.5 354.3 0 256 0H224z"/></svg>') no-repeat center bottom;
     background-size: contain;
 }
 
 /* --- Featured Book Showcase --- */
 .book-showcase {
-    background: rgba(255,255,255,0.05) !important;
+    background: rgba(255, 255, 255, 0.5) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(0,0,0,0.1) !important;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.dark .book-showcase {
+    background: rgba(255,255,255,0.05) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
 }
 
 .book-showcase:hover {
     transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.dark .book-showcase:hover {
     box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.05) !important;
     border-color: rgba(255,255,255,0.2) !important;
 }
