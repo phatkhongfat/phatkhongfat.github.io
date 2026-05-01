@@ -16,6 +16,6 @@ A visual representation of my reading journey, automatically synchronized from S
   {{< bookshowcase link="bookshelf/the-master-and-margarita" >}}
   {{< bookshowcase link="bookshelf/crime-and-punishment" >}}
   {{< bookshowcase link="bookshelf/meditations" >}}
-  {{< bookshowcase link="bookshelf/the-metamorphosis" >}}
-  {{< bookshowcase link="bookshelf/dune" >}}
+  {{< bookshowcase link="bookshelf/piranesi" >}}
+  {{< bookshowcase link="bookshelf/the-stranger" >}}
 </div>

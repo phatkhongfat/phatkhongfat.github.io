@@ -22,26 +22,26 @@
   </div>
 
   {{ if gt $total 0 }}
-    {{ $chunkSize := cond $compact 8 12 }}
+    {{ $chunkSize := cond $compact 15 30 }}
     {{ $chunks := div (add $total (sub $chunkSize 1)) $chunkSize }}
     
-    <div class="flex flex-col gap-y-8">
-      {{ range seq $chunks }}
-        {{ $offset := mul (sub . 1) $chunkSize }}
-        {{ $shelfBooks := first $chunkSize (after $offset $books) }}
+    <div class="flex flex-col gap-y-6">
+      {{- range seq $chunks -}}
+        {{- $offset := mul (sub . 1) $chunkSize -}}
+        {{- $shelfBooks := first $chunkSize (after $offset $books) -}}
         
         <div class="spine-shelf {{ if $compact }} !min-h-[160px] !mb-8 {{ end }}">
-          {{ if and (not $compact) (eq . 1) (eq $target "read") }}
+          {{- if and (not $compact) (eq . 1) (eq $target "read") -}}
             <div class="shelf-decoration decoration-skull"></div>
-          {{ end }}
+          {{- end -}}
 
-          {{ range $shelfBooks }}
+          {{- range $shelfBooks -}}
             <a href="{{ .RelPermalink }}" class="book-spine {{ if $compact }} !w-6 !h-[140px] {{ end }}" style="background-color: {{ .Params.spine_color | default "#444" }}; {{ if not $compact }} width: {{ .Params.spine_width | default 32 }}px; {{ end }}">
               <div class="spine-title {{ if $compact }} !w-[120px] !text-[8px] {{ end }}">{{ .Title }}</div>
             </a>
-          {{ end }}
+          {{- end -}}
         </div>
-      {{ end }}
+      {{- end -}}
     </div>
 
   {{ else }}
